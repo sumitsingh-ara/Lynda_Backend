@@ -12,8 +12,13 @@ app.use("/images", express.static(__dirname + "public/images"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded());
 
+
 app.get("/launch", (req, res) => {
   res.render("Register");
+});
+
+app.get("/signin", (req, res) => {
+  res.render("signin");
 });
 
 const userController = require("./controllers/user.controller")
@@ -21,7 +26,9 @@ app.use("/users",userController);
 
 
 
-app.listen(3838, async (req, res) => {
+app.listen(2121, async (req, res) => {
   await connectWithMongodb();
   console.log("listen to port 3838");
 });
+
+
