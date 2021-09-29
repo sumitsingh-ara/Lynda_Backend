@@ -11,8 +11,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-  <!-- <script src="./joinNow.js"></script> -->
-
 </head>
 
 <body>
@@ -33,8 +31,7 @@
            <div> <label class="input-lable" for="">First Name</label>
             <input id="firstName" type="text" placeholder="first name" name="first_name" value=""/></div>
            <div> <label class="input-lable" for="">Last Name</label>
-            <input id="lastName" type="text" placeholder="last name" nmae="last_name" value=""/></div>
-         
+            <input id="lastName" type="text" placeholder="last name" name="last_name" value=""/></div>
          </div>
           <label class="input-lable" for="">Email or phone number</label>
           <input id="email" type="text" placeholder="Email or Phone" name="email_or_phone" value="" />
@@ -44,12 +41,12 @@
           <p>
             <div id="signedup">
             </div>
-          <input class="sign-In" id="continue" type="submit" Agree & Join/>
+          <input class="sign-In" id="continue" type="submit" value="Agree & Join"/>
         </div>
         <div>
           <div class="form-new">
               Already on LinkedIn?<span>
-                <a href="../Login/signin.html">Sign in</a></span>
+                <a href="signin" >Sign in</a></span>
             </p>
           </div>
         </div>
@@ -73,9 +70,22 @@
     </div>
 </footer>
   <!-- <script type="text/javascript" src="js/Register-new.js"></script> -->
+    <!-- users is an array -->
+        <button onclick="clickUser(<%= JSON.stringify(data) %>)">Click</button>
 </body>
 
 </html>
 <script>
+  var store =[];
+  let email = document.getElementById("email").value
+  function clickUser(data) {
+    let store =[];
+    for(let i =0; i<data.length; i++) {
+      if(data.email_or_phone == email){
+        console.log(data)
+      }
+    }
+  }
+  
   
 </script>
