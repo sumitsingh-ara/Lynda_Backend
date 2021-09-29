@@ -45,7 +45,7 @@
                         <input id="password" type="password" placeholder="Password" /><br /><br />
                         <!-- <a id="signIn" onclick="login()">Sign in</a> -->
                         <div id="wrongPassword"></div>
-                        <button id="login-btn">Sign In</button>
+                        <button id="login-btn" >Sign In</button>
                         
                     </div>
                     <div class="form-a">
@@ -84,18 +84,35 @@
 
 <script>
 
-    let email = document.getElementById("email").value;
+   
+
     let btn = document.getElementById("login-btn")
     btn.addEventListener("click", rqst)
-    var store =[];
+  
     
         async function rqst(){
+             var email1 = document.querySelector("#email").value;
+    // console.log(email1);
             let data = await fetch("http://localhost:3838/users")
             let res = await data.json();
             let x = res.users;
-                console.log(x)
-        }
-        rqst();
+                // console.log(x);
+                x.forEach(({email_or_phone,password})=> {
+                    // console.log(email1);
+                    if(email1===email_or_phone)
+                    {
+                        console.log("i am here");
+                    }else{
+                        console.log("show err");
+                    }
+
+                });
+
+               
+
+}
+        
+        // rqst();
        
     
      
