@@ -29,14 +29,14 @@
         <div>
          <div class="fnameLname">
            <div> <label class="input-lable" for="">First Name</label>
-            <input id="firstName" type="text" placeholder="first name" name="first_name" value=""/></div>
+            <input id="firstName" type="text" placeholder="first name" name="first_name"/></div>
            <div> <label class="input-lable" for="">Last Name</label>
-            <input id="lastName" type="text" placeholder="last name" name="last_name" value=""/></div>
+            <input id="lastName" type="text" placeholder="last name" name="last_name"/></div>
          </div>
           <label class="input-lable" for="">Email or phone number</label>
-          <input id="email" type="text" placeholder="Email or Phone" name="email_or_phone" value="" />
+          <input id="email" type="text" placeholder="Email or Phone" name="email_or_phone" />
           <label class="input-lable" for="">Password (6 or more characters)</label>
-          <input  id="password" type="password" placeholder="Create a password" name="password" value="" />
+          <input  id="password" type="password" placeholder="Create a password" name="password" />
           <p class="join-form">By clicking Agree & Join, you agree to the LinkedIn <a href="">User Agreement</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.</p>
           <p>
             <div id="signedup">
@@ -71,21 +71,10 @@
 </footer>
   <!-- <script type="text/javascript" src="js/Register-new.js"></script> -->
     <!-- users is an array -->
-        <button onclick="clickUser(<%= JSON.stringify(data) %>)">Click</button>
 </body>
 
 </html>
 <script>
-  var store =[];
-  let email = document.getElementById("email").value
-  function clickUser(data) {
-    let store =[];
-    for(let i =0; i<data.length; i++) {
-      if(data.email_or_phone == email){
-        console.log(data)
-      }
-    }
-  }
-  
+
   
 </script>
