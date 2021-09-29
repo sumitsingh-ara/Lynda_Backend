@@ -20,31 +20,31 @@
     <header>
       <div class="logo-section">
         <div class="logo-container">
-          <img onclick=pop() class="header-logo" src="../images/LinkedIn-Logo.wine.png" alt="" />
+          <img onclick=pop() class="header-logo" src="images/LinkedIn-Logo.wine.png" alt="" />
           <h1 class="h1-title">Make the most of your professional life</h1>
         </div>
       </div>
     </header>
-
+    <form action="/users" method="post">
     <div  id="form-main-content">
       <div class="form-wrap">
         <div>
          <div class="fnameLname">
            <div> <label class="input-lable" for="">First Name</label>
-            <input id="firstName" type="text" placeholder="first name"/></div>
+            <input id="firstName" type="text" placeholder="first name" name="first_name" value=""/></div>
            <div> <label class="input-lable" for="">Last Name</label>
-            <input id="lastName" type="text" placeholder="last name"/></div>
+            <input id="lastName" type="text" placeholder="last name" nmae="last_name" value=""/></div>
          
          </div>
           <label class="input-lable" for="">Email or phone number</label>
-          <input id="email" type="text" placeholder="Email or Phone"/>
+          <input id="email" type="text" placeholder="Email or Phone" name="email_or_phone" value="" />
           <label class="input-lable" for="">Password (6 or more characters)</label>
-          <input  id="password" type="password" placeholder="Create a password" />
+          <input  id="password" type="password" placeholder="Create a password" name="password" value="" />
           <p class="join-form">By clicking Agree & Join, you agree to the LinkedIn <a href="">User Agreement</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.</p>
           <p>
             <div id="signedup">
             </div>
-          <button class="sign-In" id="continue" type="submit" onclick='check()'>Agree & Join</button>
+          <input class="sign-In" id="continue" type="submit" Agree & Join/>
         </div>
         <div>
           <div class="form-new">
@@ -55,9 +55,10 @@
         </div>
       </div>
     </div>
+  </form>
 <footer>
     <div class="footBar">
-      <div><img src="../images/Screenshot_2.jpg"> </div>
+      <div><img src="images/Screenshot_2.jpg"> </div>
       <div>&copy;2021 </div>
       <div>About</div>
       <div>Accessibility</div>
@@ -71,7 +72,10 @@
       <div>Language &#9660;</div>
     </div>
 </footer>
-  <script type="text/javascript" src="./Register-new.js"></script>
+  <!-- <script type="text/javascript" src="js/Register-new.js"></script> -->
 </body>
 
 </html>
+<script>
+  
+</script>

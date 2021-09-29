@@ -5,95 +5,79 @@ body {
     position: relative;
     background: #f3f2ef;
     min-height: 100vh;
-}
-
-.logo-section {
+  }
+  .logo-section {
     width: 80%;
     margin: auto;
-}
-
-.logo-container {
+  }
+  .logo-container {
     text-align: center;
-}
-
-.logo-container img:hover {
+  }
+  .logo-container img:hover {
     cursor: pointer;
-}
-
-.header-logo {
+  }
+  .header-logo {
     width: 140px;
     padding: 20px;
-}
-
-h1.h1-title {
+  }
+  h1.h1-title {
     font-size: 32px;
     font-weight: 400;
     margin: 0;
     padding-bottom: 24px;
     line-height: 1;
-}
-
-/* form section */
-#form-main-content {
+  }
+  
+  /* form section */
+  #form-main-content {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 24px;
     height: 450px;
-}
-
-.fnameLname {
+  }
+  .fnameLname {
     display: flex;
-}
-
-.fnameLname {
+  }
+  .fnameLname {
     display: flex;
-}
-
-.fnameLname div:nth-child(1) {
+  }
+  .fnameLname div:nth-child(1) {
     width: 45%;
     margin-right: 5%;
-}
-
-.fnameLname div:nth-child(2) {
+  }
+  .fnameLname div:nth-child(2) {
     width: 45%;
     margin-left: 5%;
-}
-
-.form-wrap {
+  }
+  .form-wrap {
     width: 352px;
     border-radius: 10px;
     background-color: #fff;
     padding: 24px;
-}
-
-.form-logo {
+  }
+  .form-logo {
     padding-top: 20px;
-}
-
-.form-h1 {
+  }
+  .form-h1 {
     font-size: 24px;
     line-height: 31.9999px;
-}
-
-.form-wrap p {
+  }
+  .form-wrap p {
     color: #66666f;
-}
-
-.input-lable {
+  }
+  .input-lable {
     font-size: 14px;
     line-height: 1.42857;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
     display: block;
     margin: 16px 0 4px 0;
-}
-
-.input-lable:nth-child(1) {
+  }
+  .input-lable:nth-child(1) {
     margin-top: 0;
-}
-
-input {
+  }
+  input {
     border-radius: 5px;
     font-size: 20px;
     height: 30px;
@@ -103,9 +87,8 @@ input {
     font-size: 14px;
     line-height: 20px;
     padding: 0 10px;
-}
-
-.join-form {
+  }
+  .join-form {
     font-size: 12px;
     line-height: 1.42857;
     font-weight: 400;
@@ -113,15 +96,13 @@ input {
     display: block;
     text-align: center;
     margin: 16px 0;
-}
-
-#signedup {
+  }
+  #signedup {
     font-size: 14px;
     height: 20px;
     text-align: center;
-}
-
-.sign-In {
+  }
+  .sign-In {
     background-color: #0073b1;
     height: 48px;
     border-radius: 24px;
@@ -144,50 +125,42 @@ input {
     z-index: 0;
     width: 100%;
     margin-top: 30px;
-}
-
-#forgot {
+  }
+  #forgot {
     color: #0a66c2;
     margin-top: 5px;
     text-decoration: none;
     /* display: block; */
-}
-
-.form-a {
+  }
+  .form-a {
     margin-top: 15px;
-}
-
-#forgot:hover {
+  }
+  #forgot:hover {
     background-color: #98d8f4;
     border-radius: 28px;
     padding: 10px 15px;
-}
-
-.form-new {
+  }
+  .form-new {
     text-align: center;
     padding-top: 10px;
-}
-
-.form-new a,
-.join-form a {
+  }
+  .form-new a,
+  .join-form a {
     text-decoration: none;
     color: #0a66c2;
-}
-
-.form-new a:hover,
-.join-form a:hover {
+  }
+  .form-new a:hover,
+  .join-form a:hover {
     text-decoration: underline;
-}
-
-footer {
+  }
+  footer {
     background: #fff;
     font-size: 12px;
     position: absolute;
     width: 100%;
     bottom: 0;
-}
-
-.footBar {
+  }
+  .footBar {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -195,12 +168,11 @@ footer {
     width: 85%;
     padding: 10px;
     flex-wrap: wrap;
-}
-
-.footBar div:hover {
+  }
+  .footBar div:hover {
     cursor: pointer;
-}
-
-.footBar img {
+  }
+  .footBar img {
     filter: grayscale(100%);
-}
+  }
+  
