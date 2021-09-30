@@ -28,9 +28,11 @@ app.get('/home',async (req, res)=>{
   res.render("home")
 })
 
+
 const userController = require("./controllers/user.controller");
-const User = require("./models/user.models");
+const productController = require("./controllers/product.controller");
 app.use("/users",userController);
+app.use("/products",productController);
 
 
 
