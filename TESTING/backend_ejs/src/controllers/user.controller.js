@@ -14,8 +14,9 @@ router.post('',async(req,res)=>{
         const usersList = await User.find({email_or_phone:req.body.email_or_phone}).lean().exec();
         if(usersList.length != 0){
             console.log(usersList.length)
-            let a = "ID EXISTS!"
-            res.render("Id exists")
+            res.render("Register",{
+                x:"ID Exists!",
+            });
         }else{
             const users = await User.create(req.body)
             return res.redirect("signin")
