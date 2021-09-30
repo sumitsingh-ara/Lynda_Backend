@@ -43,7 +43,7 @@
               <!-- Need to show here the error message -->
               <%= x %>
             </div>
-          <input class="sign-In" onclick="idInvalid()" id="continue" type="submit" value="Agree & Join"/>
+          <input class="sign-In" id="continue" type="submit" value="Agree & Join"/>
         </div>
         <div>
           <div class="form-new">
@@ -82,13 +82,10 @@
       show.textContent="You need to login first"
       show.style.color ="red"
     }
-    function remove(){
+    function remove(e){
+      e.preventDefault();
       let show = document.getElementById("signedup");
       show.innerHTML=null;
     }
 
-    function idInvalid(){
-      let cont = document.getElementById("continue");
-          cont.textContent="USER ID ALREADY EXISTS!"
-    }
 </script>

@@ -8,14 +8,22 @@
 </head>
 <body>
     <h1>Welcome to home page</h1>
+    <button style="text-align: center">I will change flag to false</button>
+    <h1>Hello I am <%= name %>!</h1>
+    
 </body>
+
 </html>
 <script>
 
     async function dataFetch(){
-        let data = await fetch("http://localhost:3838/products")
+        let data = await fetch("http://localhost:3838/users")
         let res = await data.json();
         console.log(res);
     }
     dataFetch();
+  
+    var x = "<%- name %>";
+    console.log(x); 
+
 </script>

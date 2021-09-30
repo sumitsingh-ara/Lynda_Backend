@@ -23,7 +23,7 @@
                 </a>
             </div>
         </header>
-
+        <form action="/login" method="post">
         <div id="form-main-content">
             <div class="form-wrap">
                 <div>
@@ -40,12 +40,14 @@
                         </p>
                     </div>
                     <div>
-                        <input id="email" type="text" placeholder="Email or Phone" />
+                        <input type="text" placeholder="Email or Phone" name="email"/>
                         <br /><br />
-                        <input id="password" type="password" placeholder="Password" /><br /><br />
+                        <input type="password" placeholder="Password" name="password" /><br /><br />
                         <!-- <a id="signIn" onclick="login()">Sign in</a> -->
-                        <div id="wrongPassword"></div>
-                        <button id="login-btn" >Sign In</button>
+                        <div id="wrongPassword">
+                            <%= y %>
+                        </div>
+                        <button id="login-btn"type="submit" >Sign In</button>
                         
                     </div>
                     <div class="form-a">
@@ -57,6 +59,7 @@
                 </div>
             </div>
         </div>
+    </form>
         <footer>
             <div class="footBar">
                 <div><img src="../images/Screenshot_2.jpg" /></div>
@@ -73,73 +76,7 @@
                 <div>Language &#9660;</div>
             </div>
         </footer>
-        <!-- <script type="text/javascript" src="./sign-in.js"></script> -->
-
-
-
-
-
 
 </body>
-
-<script>
-
-   
-
-    let btn = document.getElementById("login-btn")
-    btn.addEventListener("click", rqst)
-  
-    
-        async function rqst(){
-             var email1 = document.querySelector("#email").value;
-              var password1 = document.querySelector("#password").value;
-    // console.log(email1);
-            let data = await fetch("http://localhost:3838/users")
-            let res = await data.json();
-            let x = res.users;
-                // console.log(x);
-                x.forEach(({email_or_phone,password,first_name,flag,payment_flag})=> {
-                    // console.log(email1);
-                    if(email1===email_or_phone )
-                    {
-                        if(password1===password)
-                        {
-                            let x=document.getElementById("wrongPassword");
-                            x.innerHTML=null;
-                            x.textContent="Hold on!!redirecting to home page"
-                            x.style.color="green"
-                          
-                             function redirect() {
-            window.location.href ="http://localhost:3838/home"
-          }
-
-          setTimeout(redirect,2000)
-        return
-
-                        }else if(email1===email_or_phone){
-                            if(password1!==password)
-                            {
-                            let x=document.getElementById("wrongPassword");
-                            x.innerHTML=null;
-                            x.textContent="wrong password"
-                            x.style.color="red"
-                            }
-                        return
-                    }
-                    }
-                });
-               
-
-}
-        
-        // rqst();
-       
-    
-     
-
-
-
-
-</script>
 
 </html>

@@ -7,25 +7,55 @@ router.get('',async(req,res)=>{
 
     res.status(200).send({users})
 })
+router.patch('/update/:id',async(req,res)=>{
+    const user = await User.findByIdAndUpdate(req.params.id,req.body,{new:true}).lean().exec()
+    console.log(user);
+    return res.status(200).send({user})
+})
 
 router.post('',async(req,res)=>{
-    
-    if(req.body.first_name && req.body.email_or_phone && req.body.password){
-        const usersList = await User.find({email_or_phone:req.body.email_or_phone}).lean().exec();
-        if(usersList.length != 0){
-            console.log(usersList.length)
+    try{
+        if(req.body.first_name && req.body.email_or_phone && req.body.password){
+            const usersList = await User.find({email_or_phone:req.body.email_or_phone}).lean().exec();
+            if(usersList.length != 0){
+                res.render("Register",{
+                    x:"User id already exists!",
+                });
+                return
+            }else{
+                const users = await User.create(req.body)
+              res.redirect("signin")
+              return
+            }
+        }else if(!req.body.first_name){
             res.render("Register",{
-                x:"ID Exists!",
+                x:"Name is missing !",
             });
-        }else{
-            const users = await User.create(req.body)
-            return res.redirect("signin")
+            return
+        }else if(!req.body.email_or_phone){
+            res.render("Register",{
+                x:"Email is missing !",
+            });
+            return
         }
-    }else{
-        res.send("Email,Name or Password is missing");
+        else if(!req.body.password){
+            res.render("Register",{
+                x:"Password is missing !",
+            });
+            return
+        }
     }
-    return
+    catch(err){
+        res.status(400).send(err.message);
+    }
+ 
+    
    
+})
+router.delete("/:deleteid",async(req,res)=>{
+    const user = await User.findByIdAndDelete(req.params.deleteid)
+
+    return res.status(200).send("User deleted successfully")
 })
 
 module.exports = router;

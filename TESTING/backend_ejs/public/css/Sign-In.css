@@ -91,6 +91,7 @@ body {
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: normal;
     filter: brightness(0.85);
+    color: red;
   }
   input {
     border-radius: 5px;
