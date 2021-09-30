@@ -9,8 +9,22 @@ router.get('',async(req,res)=>{
 })
 
 router.post('',async(req,res)=>{
-    const users = await User.create(req.body)
-    res.send({users})
+    
+    if(req.body.first_name && req.body.email_or_phone && req.body.password){
+        const usersList = await User.find({email_or_phone:req.body.email_or_phone}).lean().exec();
+        if(usersList.length != 0){
+            console.log(usersList.length)
+            let a = "ID EXISTS!"
+            res.render("Id exists")
+        }else{
+            const users = await User.create(req.body)
+            return res.redirect("signin")
+        }
+    }else{
+        res.send("Email,Name or Password is missing");
+    }
+    return
+   
 })
 
 module.exports = router;

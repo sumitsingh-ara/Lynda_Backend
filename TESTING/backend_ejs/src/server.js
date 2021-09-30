@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const bodyParsers = require("body-parser")
 const connectWithMongodb = require("./configs/db")
 const app = express();
 app.use(express.json());
@@ -11,12 +12,17 @@ app.use("/images", express.static(__dirname + "public/images"));
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded());
+app.use(bodyParsers.urlencoded({extended: true}));
 
-
-app.get("/launch",async (req, res) => {
-  let data = await User.find().lean().exec();
+//for launching website from signup page
+app.get("/signup",async (req, res) => {
+  let data = await User.find({}).lean().exec();
   res.render("Register",{data});
 });
+//for merging with href addresses
+app.get('/signin',async (req, res)=>{
+  res.render("signin")
+})
 
 const userController = require("./controllers/user.controller");
 const User = require("./models/user.models");
