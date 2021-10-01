@@ -5,7 +5,7 @@ const signupSchema = new mongoose.Schema({
     last_name:{type:String,required:false},
     email_or_phone:{type:String,required:true},
     password:{type:String,required:true},
-    flag:{type:Boolean,default: false},
+    flag:{type:Number,default: 0},
     payment_flag:{type:Boolean,default:false},
 },{
     versionKey:false,

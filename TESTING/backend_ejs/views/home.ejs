@@ -1,419 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/Home-page.css">
-    <link rel="stylesheet" href="css/homepopper.css">
-    <link rel="stylesheet" href="css/homepopper2.css">
-    <link rel="stylesheet" href="css/homepopper3.css">
-    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-  </head>
 
-  <body>
-    <!-- ==========================================header-start-here====================================-->
-    <!-- Navigation Bar -->
-    <div id="header-su">
-      <div class="first-bar">
-        <div class="inside-header-su">
-    
-          <div onclick="linkedinHome()" class="linkedin-logo-su hover">in</div>
-          <div onclick="linkedinHome()" class="learning-su hover">LEARNING</div>
-          <!-- Browse button -->
-          <div onclick="topLists()" class="browse-su">
-            <div class="content-su">
-              <div class="dotted">
-                <i class="fa fa-list-ul" aria-hidden="true"></i>
-              </div>
-              <div>
-              </div>
+<head>
+  <link rel="stylesheet" href="css/Home-page.css">
+  <link rel="stylesheet" href="css/homepopper.css">
+  <link rel="stylesheet" href="css/homepopper2.css">
+  <link rel="stylesheet" href="css/homepopper3.css">
+  <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- ==========================================header-start-here====================================-->
+  <!-- Navigation Bar -->
+  <div id="header-su">
+    <div class="first-bar">
+      <div class="inside-header-su">
+
+        <div onclick="linkedinHome()" class="linkedin-logo-su hover">in</div>
+        <div onclick="linkedinHome()" class="learning-su hover">LEARNING</div>
+        <!-- Browse button -->
+        <div onclick="topLists()" class="browse-su">
+          <div class="content-su">
+            <div class="dotted">
+              <i class="fa fa-list-ul" aria-hidden="true"></i>
             </div>
-            <div class="size-su">Browse</div>
+            <div>
+            </div>
           </div>
-          <!-- Search Box -->
-          <div class="search-Bar-su">
-            <div class="search-input-su">
-              <input type="text" placeholder="Search for skills,subjects or software">
+          <div class="size-su">Browse</div>
+        </div>
+        <!-- Search Box -->
+        <div class="search-Bar-su">
+          <div class="search-input-su">
+            <input type="text" placeholder="Search for skills,subjects or software">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="search-mobile">
+          <div class="content-su">
+            <div class="dotted">
               <i class="fa fa-search" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="search-mobile">
-            <div class="content-su">
-              <div class="dotted">
-                <i class="fa fa-search" aria-hidden="true"></i>
+          <div class="size-su">Search</div>
+        </div>
+        <!-- Home ,My learning,Me, lang,start my free month trial -->
+
+        <div class="header-buttons-su">
+          <a href="./home.html" id="home"><i class="fa fa-home adjust" aria-hidden="true"></i>
+            <div>Home</div>
+          </a>
+          <div class="learning-head"><a href="../My_Learning/myLearning.html" id="login"><i
+                class="fa fa-leanpub adjust2" aria-hidden="true"></i>
+              <div>My Learning</div>
+            </a></div>
+          <div class="dropdown-head-su">
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o dropbtn adjust3"
+                  aria-hidden="true"></i>Me</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="../My_Learning/myLearning.html">My Learning</a>
+                <a href="../My_Learning/myLearning.html">In Progress</a>
+                <a href="../My_saved/saved.html">Saved</a>
+                <a href="../Business/business.html">Business</a>
+                <a href="../Higher_Education/higherEducation.html">Higher Education</a>
+                <a href="../Government/government.html">Government</a>
+                <a href="../Login/signin.html">Sign-out</a>
               </div>
             </div>
-            <div class="size-su">Search</div>
           </div>
-          <!-- Home ,My learning,Me, lang,start my free month trial -->
-    
-          <div class="header-buttons-su">
-            <a href="./home.html" id="home"><i class="fa fa-home adjust" aria-hidden="true"></i>
-              <div>Home</div>
-            </a>
-            <div class="learning-head"><a href="../My_Learning/myLearning.html" id="login"><i class="fa fa-leanpub adjust2"
-                  aria-hidden="true"></i>
-                <div>My Learning</div>
-              </a></div>
-            <div class="dropdown-head-su">
-              <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o dropbtn adjust3"
-                    aria-hidden="true"></i>Me</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="../My_Learning/myLearning.html">My Learning</a>
-                  <a href="../My_Learning/myLearning.html">In Progress</a>
-                  <a href="../My_saved/saved.html">Saved</a>
-                  <a href="../Business/business.html">Business</a>
-                  <a href="../Higher_Education/higherEducation.html">Higher Education</a>
-                  <a href="../Government/government.html">Government</a>
-                  <a href="../Login/signin.html">Sign-out</a>
-                </div>
-              </div>
-            </div>
-            <div class="timer-head-su"><a onclick="dikhao()" id="trial">Start my free month</a></div>
-    
-          </div>
+          <div class="timer-head-su" id="trial">Start my free trial</div>
+
         </div>
       </div>
-      <hr />
-      <!-- 2nd nav bar -->
-      <div class="second-bar">
-        <div class="container">
-          <div class="right-side-su">
-            <div class="bar-container">
-              Solutions for:
-              <a href="../Business/business.html">Business</a>
-              <a href="../Higher_Education/higherEducation.html">Higher Education</a>
-              <a href="../Government/government.html">Goverment</a>
-              <div>|</div>
-              <a href="../Subscription/subscription.html">Buy for my team</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr>
     </div>
-    <!-- ==========================================header-ends-here====================================-->
-<!-- 3rd part main body -->
-<div id="body-container">
+    <hr />
+    <!-- 2nd nav bar -->
+    <div class="second-bar">
+      <div class="container">
+        <div class="right-side-su">
+          <div class="bar-container">
+            Solutions for:
+            <a href="../Business/business.html">Business</a>
+            <a href="../Higher_Education/higherEducation.html">Higher Education</a>
+            <a href="../Government/government.html">Goverment</a>
+            <div>|</div>
+            <a href="../Subscription/subscription.html">Buy for my team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- ==========================================header-ends-here====================================-->
+  <!-- 3rd part main body -->
+  <div id="body-container">
     <!-- body 1st part -->
     <div class="suggest-su">
-        <div class="head-cont-su">
-            <div class="skillGrow-su"><span id="nameDisplay"></span><%- name %>,grow your skills and advance your career with LinkedIn Learning</div>
-            <div class="million-su">Millions of Members are on LinkedIn Learning</div>
-            <div class="pad-top-su">
-                <button id="trial-main-su" onclick="update()">Start my free month</button>
-            </div>
-            <div class="train">Need to train your team? Learn More</div>
+      <div class="head-cont-su">
+        <div class="skillGrow-su"><span id="nameDisplay"></span>
+          <%- name %>,grow your skills and advance your career with LinkedIn Learning
         </div>
+        <div class="million-su">Millions of Members are on LinkedIn Learning</div>
+        <div class="pad-top-su">
+          <button id="trial-main-su" onclick="start()">Start my free month</button>
+        </div>
+        <div class="train">Need to train your team? Learn More</div>
+      </div>
     </div>
     <!-- Top Picks Setion -->
-    <div class="top-picks-heading">Top Picks for <span id="nameDisplay2"><%- name %></span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
+    <div class="top-picks-heading">Top Picks for <span id="nameDisplay2">
+        <%- name %>
+      </span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button
+          id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
     <div id="containerPOP">
 
     </div>
     <!-- slider down -->
-        <div class="slider-below">
-            <h2 style="padding-left: 15px;">Get the most common skills in India <span class="round">i</span> </h2>
-            <div class="slider-below1">
-              <div class=half>
-                <div><span>1</span><span>Engineering</span> <span>Explore-></span></div>
-                <div><span>2</span><span >SQL</span> <span>Explore-></span></div>
-                <div><span>3</span><span >Java</span> <span>Explore-></span></div>
-              </div>
-              <div class=half>
-                <div><span>4</span><span>C (Programming Language)</span> <span>Explore-></span></div>
-                <div><span>5</span><span >HTML</span> <span>Explore-></span></div>
-              </div>
-            </div>
+    <div class="slider-below">
+      <h2 style="padding-left: 15px;">Get the most common skills in India <span class="round">i</span> </h2>
+      <div class="slider-below1">
+        <div class=half>
+          <div><span>1</span><span>Engineering</span> <span>Explore-></span></div>
+          <div><span>2</span><span>SQL</span> <span>Explore-></span></div>
+          <div><span>3</span><span>Java</span> <span>Explore-></span></div>
         </div>
+        <div class=half>
+          <div><span>4</span><span>C (Programming Language)</span> <span>Explore-></span></div>
+          <div><span>5</span><span>HTML</span> <span>Explore-></span></div>
+        </div>
+      </div>
+    </div>
     <!-- write here -->
-
-     <div class="top-picks-heading2">Beacause you have Programming Language on your LinkedIn <span><button id="slbtns5" class="btn-Slider marg-lef-pop">&#10094;</button></span>
-      <span><button id="slbtns6" class="btn-Slider">&#10095;</button></span> </div>
-  
-        <div id="containerPOP2"></div>
-
+    <!-- 2nd slider -->
+    <div class="top-picks-heading2">Beacause you have Programming Language on your LinkedIn <span><button id="slbtns3"
+          class="btn-Slider marg-lef-pop">&#10094;</button></span>
+      <span><button id="slbtns4" class="btn-Slider">&#10095;</button></span>
     </div>
-     <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button id="slbtns7" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns8" class="btn-Slider">&#10095;</button></span> </div>
-  
-        <div id="containerPOP3"></div>
 
-    </div>
-   <!-- onwards top picks -->
-   
+    <div id="containerPOP2"></div>
+
+  </div>
+  <!-- 3rd slider -->
+  <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button
+        id="slbtns7" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns8"
+        class="btn-Slider">&#10095;</button></span> </div>
+
+  <div id="containerPOP"></div>
+
+  </div>
+  <!-- onwards top picks -->
 
 
-</div>
-<!-- Footer Part -->
-<div id="footer-su">
+
+  </div>
+  <!-- Footer Part -->
+  <div id="footer-su">
     <div class="footer-first-su">
-        <div class="footer-content-su">
-            <div class="flex-sus">English(English) <div class="arrow-su-fill down-sus"></div>
-            </div>
-            <div>About</div>
-            <div>Become an Instructor</div>
-            <div class="blue-su">Buy for my team</div>
-            <div>Help</div>
-            <div>Privacy & Terms <i class="arrow-su up-su"></i></div>
-            <div>Accessibility</div>
-            <div>Apps <i class="arrow-su up-su"></i></div>
+      <div class="footer-content-su">
+        <div class="flex-sus">English(English) <div class="arrow-su-fill down-sus"></div>
         </div>
+        <div>About</div>
+        <div>Become an Instructor</div>
+        <div class="blue-su">Buy for my team</div>
+        <div>Help</div>
+        <div>Privacy & Terms <i class="arrow-su up-su"></i></div>
+        <div>Accessibility</div>
+        <div>Apps <i class="arrow-su up-su"></i></div>
+      </div>
     </div>
     <div class="footer-second-su">
-        <div class="flex-sus left-su">
-            <div>
-                <h3>Linked</h3>
-            </div>
-            <div class="linkedin-logo-sus">
-                in
-            </div>
-            <div class="simpler-su">LinkedIn Corporation © 2021</div>
+      <div class="flex-sus left-su">
+        <div>
+          <h3>Linked</h3>
         </div>
+        <div class="linkedin-logo-sus">
+          in
+        </div>
+        <div class="simpler-su">LinkedIn Corporation © 2021</div>
+      </div>
     </div>
-</div>
-</div><!-- end myWorkContent -->
-<script type="text/javascript" src="js/home-page.js"></script>
-<!-- <script type="text/javascript" src="js/home-page2.js"></script>
+  </div>
+  </div><!-- end myWorkContent -->
+  <script type="text/javascript" src="js/home-page.js"></script>
+  <!-- <script type="text/javascript" src="js/home-page2.js"></script>
 <script type="text/javascript" src="js/home-page3.js"></script> -->
 </body>
+
 </html>
 <script>
-    var x = "<%- name %>";
-   // console.log(x); 
-    var y = "<%- userid %>";
-   
-
-       
-    
-
-   //Caraousel Running;
-async function dataFetch(){
-        
-  let data = await fetch("http://localhost:3838/products")
-  let res = await data.json();
-  let x = res.products;
-  showProducts(x)
-}
-dataFetch();
-
-function showProducts(x) {
-  async function getDemo(){
-    let data = await fetch(`http://localhost:3838/users/getone/${y}`)
-  let res = await data.json();
-  let z = await res.user.flag
-
-
-    //checking trial has activated or not
-    if(z == false){
-
-          x.forEach(function (product, n) {
-        let parent = document.createElement("div");
-        parent.setAttribute("id", "parent");
-        parent.setAttribute("class", "dummy");
-        parent.onmouseenter = function () {
-          document.getElementById(`contents${n}`).style.height = "180px";
-          document.getElementById(`videos${n}`).style.height = "160px";
-        };
-        parent.onmouseout = function () {
-          document.getElementById(`contents${n}`).style.height = "32px";
-          document.getElementById(`videos${n}`).style.height = "155px";
-        };
-        let videoBox = document.createElement("div");
-        videoBox.setAttribute("class", "videoBoxes");
-        let vide = document.createElement("iframe");
-        vide.setAttribute('allowFullScreen', '')
-        // vide.addEventListener("click", getData);
-        vide.setAttribute("id", `videos${n}`);
-        vide.setAttribute("width", "100%");
-        vide.setAttribute("height", "155px");
-        vide.src = product.video;
-        videoBox.appendChild(vide);
-        let content = document.createElement("div");
-        content.setAttribute("id", `contents${n}`);
-        let title = document.createElement("p");
-        title.textContent = product.title;
-        let name = document.createElement("p");
-        name.textContent = `Name: ${product.name}`;
-        let by = document.createElement("p");
-        by.textContent = product.by;
-        let date = document.createElement("p");
-        date.textContent = `Released on:${product.date}`;
-        content.append(title, name, by, date);
-
-        parent.append(videoBox, content);
-        document.getElementById("containerPOP").append(parent);
-        //slider button adding funconalities
-        var dum = document.getElementsByClassName("dummy");
-        let sliderbtn1 = document.getElementById("slbtns1");
-        let sliderbtn2 = document.getElementById("slbtns2");
-        //function for moving upwards
-        var l = 0;
-        sliderbtn2.onclick = function () {
-          l++;
-          for (var i of dum) {
-            if (l == 0) {
-              i.style.left = "-300px";
-            }
-            if (l == 1) {
-              i.style.left = "-740px";
-            }
-            if (l == 2) {
-              i.style.left = "-1480px";
-            }
-            if (l == 3) {
-              i.style.left = "-2220px";
-            }
-            if (l >= 4) {
-              i.style.left = "0px";
-              l = 0;
-            }
-          }
-        };
-        //function for moving downwards
-        sliderbtn1.onclick = function () {
-          l--;
-          for (var i of dum) {
-            if (l == 0) {
-              i.style.left = "0px";
-            }
-            if (l == 1) {
-              i.style.left = "-740px";
-            }
-            if (l == 2) {
-              i.style.left = "-1480px";
-            }
-            if (l == 3) {
-              i.style.left = "-2220px";
-            }
-            if (l >= 4) {
-              l = 0;
-            }
-          }
-        };
-      });
-    }
-    //checking if a user has already activated trial in advance, then we will be displaying only the images 
-    else{
-      x.forEach(function (product, n) {
-        let parent = document.createElement("div");
-        parent.setAttribute("id", "parent");
-        parent.setAttribute("class", "dummy");
-        parent.onmouseenter = function () {
-          document.getElementById(`contents${n}`).style.height = "180px";
-          document.getElementById(`videos${n}`).style.height = "160px";
-        };
-        parent.onmouseout = function () {
-          document.getElementById(`contents${n}`).style.height = "32px";
-          document.getElementById(`videos${n}`).style.height = "155px";
-        };
-        let videoBox = document.createElement("div");
-        videoBox.setAttribute("class", "videoBoxes");
-        let vide = document.createElement("img");
-        // vide.addEventListener("click", getData);
-        vide.setAttribute("id", `videos${n}`);
-        vide.setAttribute("width", "100%");
-        vide.setAttribute("height", "155px");
-        vide.src = product.image;
-        videoBox.appendChild(vide);
-        let content = document.createElement("div");
-        content.setAttribute("id", `contents${n}`);
-        let title = document.createElement("p");
-        title.textContent = product.title;
-        let name = document.createElement("p");
-        name.textContent = `Name: ${product.name}`;
-        let by = document.createElement("p");
-        by.textContent = product.by;
-        let date = document.createElement("p");
-        date.textContent = `Released on:${product.date}`;
-        content.append(title, name, by, date);
-
-        parent.append(videoBox, content);
-        document.getElementById("containerPOP").append(parent);
-        //slider button adding funconalities
-        var dum = document.getElementsByClassName("dummy");
-        let sliderbtn1 = document.getElementById("slbtns1");
-        let sliderbtn2 = document.getElementById("slbtns2");
-        //function for moving upwards
-        var l = 0;
-        sliderbtn2.onclick = function () {
-          l++;
-          for (var i of dum) {
-            if (l == 0) {
-              i.style.left = "-300px";
-            }
-            if (l == 1) {
-              i.style.left = "-740px";
-            }
-            if (l == 2) {
-              i.style.left = "-1480px";
-            }
-            if (l == 3) {
-              i.style.left = "-2220px";
-            }
-            if (l >= 4) {
-              i.style.left = "0px";
-              l = 0;
-            }
-          }
-        };
-        //function for moving downwards
-        sliderbtn1.onclick = function () {
-          l--;
-          for (var i of dum) {
-            if (l == 0) {
-              i.style.left = "0px";
-            }
-            if (l == 1) {
-              i.style.left = "-740px";
-            }
-            if (l == 2) {
-              i.style.left = "-1480px";
-            }
-            if (l == 3) {
-              i.style.left = "-2220px";
-            }
-            if (l >= 4) {
-              l = 0;
-            }
-          }
-        };
-      });
-    }
- 
-  
+  var x = "<%- name %>";
+  // console.log(x); 
+  var y = "<%- userid %>";
+  async function dataFetch() {
+    let data = await fetch("http://localhost:3838/products")
+    let res = await data.json();
+    let x = res.products;
+    showProducts(x)
   }
-  getDemo();
-}
-//data appending finished here
+  dataFetch();
+  //data has been
+  function showProducts(prod) {
+    async function flag() {
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+      console.log(data.payment_flag,data.flag,"Sb dekho aur socho ")
+      if (data.payment_flag == false) {
+        if (data.flag == 1) {
+          //slider 1
+         prod.forEach(function (product, n) {
+         let parent = document.createElement("div");
+         parent.setAttribute("id", "parent");
+         parent.setAttribute("class", "dummy");
+         parent.onmouseenter = function () {
+           document.getElementById(`contents${n}`).style.height = "180px";
+           document.getElementById(`videos${n}`).style.height = "160px";
+         };
+         parent.onmouseout = function () {
+           document.getElementById(`contents${n}`).style.height = "32px";
+           document.getElementById(`videos${n}`).style.height = "155px";
+         };
+         let videoBox = document.createElement("div");
+         videoBox.setAttribute("class", "videoBoxes");
+         let vide = document.createElement("iframe");
+         vide.setAttribute('allowFullScreen', '')
+         // vide.addEventListener("click", getData);
+         vide.setAttribute("id", `videos${n}`);
+         vide.setAttribute("width", "100%");
+         vide.setAttribute("height", "155px");
+         vide.src = product.video;
+         videoBox.appendChild(vide);
+         let content = document.createElement("div");
+         content.setAttribute("id", `contents${n}`);
+         let title = document.createElement("p");
+         title.textContent = product.title;
+         let name = document.createElement("p");
+         name.textContent = `Name: ${product.name}`;
+         let by = document.createElement("p");
+         by.textContent = product.by;
+         let date = document.createElement("p");
+         date.textContent = `Released on:${product.date}`;
+         content.append(title, name, by, date);
 
-//this function is changing the data 
-    function update(){
-        console.log("Working")
+         parent.append(videoBox, content);
+         document.getElementById("containerPOP").append(parent);
 
-        async function demoUpdate(){
-            await fetch(`http://localhost:3838/users/update/${y}`,{
-                method: "PATCH",
-                headers:{'Content-type': "application/json"},
-                body:JSON.stringify({
-                    flag:true,
-                })
+         //slider button adding funconalities
+         var dum = document.getElementsByClassName("dummy");
+         let sliderbtn1 = document.getElementById("slbtns1");
+         let sliderbtn2 = document.getElementById("slbtns2");
+         //function for moving upwards
+         var l = 0;
+         sliderbtn2.onclick = function () {
+           l++;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "-300px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               i.style.left = "0px";
+               l = 0;
+             }
+           }
+         };
+         //function for moving downwards
+         sliderbtn1.onclick = function () {
+           l--;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "0px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               l = 0;
+             }
+           }
+         };
+       });
+       return;
+
+
+
+
+
+
+
+
+
+
+        }
+        else {
+         
+          prod.forEach(function (product, n) {
+            let parent = document.createElement("div");
+            parent.setAttribute("id", "parent");
+            parent.setAttribute("class", "dummy");
+            parent.onmouseenter = function () {
+              document.getElementById(`contents${n}`).style.height = "180px";
+              document.getElementById(`videos${n}`).style.height = "160px";
+            };
+            parent.onmouseout = function () {
+              document.getElementById(`contents${n}`).style.height = "32px";
+              document.getElementById(`videos${n}`).style.height = "155px";
+            };
+            let videoBox = document.createElement("div");
+            videoBox.setAttribute("class", "videoBoxes");
+            let vide = document.createElement("img");
+            // vide.addEventListener("click", getData);
+            vide.setAttribute("id", `videos${n}`);
+            vide.setAttribute("width", "100%");
+            vide.setAttribute("height", "155px");
+            vide.src = product.image;
+            videoBox.appendChild(vide);
+            let content = document.createElement("div");
+            content.setAttribute("id", `contents${n}`);
+            let title = document.createElement("p");
+            title.textContent = product.title;
+            let name = document.createElement("p");
+            name.textContent = `Name: ${product.name}`;
+            let by = document.createElement("p");
+            by.textContent = product.by;
+            let date = document.createElement("p");
+            date.textContent = `Released on:${product.date}`;
+            content.append(title, name, by, date);
+
+            parent.append(videoBox, content);
+            document.getElementById("containerPOP").append(parent);
+            //slider button adding funconalities
+            var dum = document.getElementsByClassName("dummy");
+            let sliderbtn1 = document.getElementById("slbtns1");
+            let sliderbtn2 = document.getElementById("slbtns2");
+            //function for moving upwards
+            var l = 0;
+            sliderbtn2.onclick = function () {
+              l++;
+              for (var i of dum) {
+                if (l == 0) {
+                  i.style.left = "-300px";
+                }
+                if (l == 1) {
+                  i.style.left = "-740px";
+                }
+                if (l == 2) {
+                  i.style.left = "-1480px";
+                }
+                if (l == 3) {
+                  i.style.left = "-2220px";
+                }
+                if (l >= 4) {
+                  i.style.left = "0px";
+                  l = 0;
+                }
+              }
+            };
+            //function for moving downwards
+            sliderbtn1.onclick = function () {
+              l--;
+              for (var i of dum) {
+                if (l == 0) {
+                  i.style.left = "0px";
+                }
+                if (l == 1) {
+                  i.style.left = "-740px";
+                }
+                if (l == 2) {
+                  i.style.left = "-1480px";
+                }
+                if (l == 3) {
+                  i.style.left = "-2220px";
+                }
+              }
+            };
+          });
+        }
+      } else {
+        console.log("Permanent video show");
+      }
+    }
+    flag();
+  }
+
+
+
+  function start() {
+    async function flag() {
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+      console.log(data.flag, "timer wala")
+      let x = data.flag;
+      //trial not activated
+      if (x == 0) {
+        async function demoUpdate() {
+          await fetch(`http://localhost:3838/users/update/${y}`, {
+            method: "PATCH",
+            headers: { 'Content-type': "application/json" },
+            body: JSON.stringify({
+              flag: 1,
             })
+          })
             .then(response => response.json())
-            .then(data => console.log(data))
         }
         demoUpdate();
+        var timeleft = 3;
+        var downloadTimer = setInterval(function set() {
+          if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+            alert("Congratualtion trial activated")
+            location.reload();
+          } else {
+            document.getElementById("trial").innerHTML =
+              "Please wait " + timeleft + "";
+          }
+          timeleft -= 1;
+        }, 1000);
+      }else{
+        document.getElementById("trial").innerHTML = null;
+        document.getElementById("trial").textContent = "Trial Exhausted";
+        document.getElementById("trial-main-su").textContent ="Trial period Exhausted"
+      }
+      //trial activated so finishing trial;
+      // else if(x == 1){
+      //   async function demoUpdate(){
+      //         await fetch(`http://localhost:3838/users/update/${y}`,{
+      //         method: "PATCH",
+      //         headers:{'Content-type': "application/json"},
+      //         body:JSON.stringify({
+      //             flag:2,
+      //         })
+      //       })
+      //     .then(response => response.json())
+      //   }
+      //   demoUpdate();
+      // }
+
     }
+    flag();
+  }
+  //Below for updating patch to current user to flag
+
+  function update() {
+
+    async function demoUpdate() {
+      await fetch(`http://localhost:3838/users/update/${y}`, {
+        method: "PATCH",
+        headers: { 'Content-type': "application/json" },
+        body: JSON.stringify({
+          flag: 2,
+        })
+      })
+        .then(response => response.json())
+    }
+
+    demoUpdate();
+  }
+  //Trial timer runners 
+
+  //checker for trial timers
+  async function flag() {
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+      console.log(data.flag, "timer me checking wala wala")
+      let x = data.flag;
+      if(x == 1) {
+        showTrial();
+      }
+  }
+  flag()
+
+
+  function showTrial() {
+    
+    var hoursLeft = 20;
+    var showTimer = setInterval(function show() {
+      if (hoursLeft <= 0) {
+        clearInterval(showTimer);
+        alert("Trial Ended");
+        update();
+        location.reload();
+
+        document.getElementById("trial").innerHTML = "Buy Pro Membership";
+      } else {
+        let mins = 0;
+        var store = hoursLeft;
+        while (store >= 60) {
+          store = store - 60;
+          mins++;
+        }
+        let hr = 0;
+        while (mins >= 60) {
+          mins = mins - 60;
+          hr++;
+        }
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+        if (hr < 10) {
+          hr = "0" + hr;
+        }
+        if (store < 10) {
+          store = "0" + store;
+        }
+        document.getElementById("trial").innerHTML =
+          "Trial left " + hr + " : " + mins + " : " + store;
+      }
+      hoursLeft -= 1;
+    }, 1000);
+  }
 
 
 </script>
-
