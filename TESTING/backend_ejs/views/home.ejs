@@ -154,10 +154,10 @@
   </div>
   <!-- 3rd slider -->
   <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button
-        id="slbtns7" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns8"
+        id="slbtns5" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns6"
         class="btn-Slider">&#10095;</button></span> </div>
 
-  <div id="containerPOP"></div>
+  <div id="containerPOP3"></div>
 
   </div>
   <!-- onwards top picks -->
@@ -194,13 +194,13 @@
   </div>
   </div><!-- end myWorkContent -->
   <script type="text/javascript" src="js/home-page.js"></script>
-  <!-- <script type="text/javascript" src="js/home-page2.js"></script>
-<script type="text/javascript" src="js/home-page3.js"></script> -->
+  <script type="text/javascript" src="js/home-page2.js"></script>
+<script type="text/javascript" src="js/home-page3.js"></script>
 </body>
 
 </html>
 <script>
-  var x = "<%- name %>";
+  // var x = "<%- name %>";
   // console.log(x); 
   var y = "<%- userid %>";
   async function dataFetch() {
@@ -306,7 +306,6 @@
            }
          };
        });
-       return;
 
 
 
@@ -319,7 +318,7 @@
 
         }
         else {
-         
+         var courseBag =[];
           prod.forEach(function (product, n) {
             let parent = document.createElement("div");
             parent.setAttribute("id", "parent");
@@ -335,7 +334,48 @@
             let videoBox = document.createElement("div");
             videoBox.setAttribute("class", "videoBoxes");
             let vide = document.createElement("img");
-            // vide.addEventListener("click", getData);
+            vide.addEventListener("click", getData);
+            
+            var courseKey = [];
+            function getData() {
+              let checker3 = localStorage.getItem("courseData");
+              checker3 = JSON.parse(checker3);
+              for (key in checker3) {
+                courseKey.push(checker3[key].name);
+              }
+
+              let inputs = {
+                name: product.name,
+                price: product.price,
+                video: product.video,/////----need to add image instead of video link
+                date: product.date,
+                time: product.time,
+                by: product.by,
+                title: product.title,
+              };
+              if (courseKey.indexOf(product.name) != -1) {
+                alert("This course is already added");
+              } else {
+                courseBag.push(inputs);
+                localStorage.setItem("courseData", JSON.stringify(courseBag));
+                window.location.href = "../Add_Cart/addToCart.html";   /////---need to set location ------for data driven to next page--//
+              }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             vide.setAttribute("id", `videos${n}`);
             vide.setAttribute("width", "100%");
             vide.setAttribute("height", "155px");
@@ -403,7 +443,95 @@
           });
         }
       } else {
+        ////////when payment done///then only
         console.log("Permanent video show");
+        prod.forEach(function (product, n) {
+         let parent = document.createElement("div");
+         parent.setAttribute("id", "parent");
+         parent.setAttribute("class", "dummy");
+         parent.onmouseenter = function () {
+           document.getElementById(`contents${n}`).style.height = "180px";
+           document.getElementById(`videos${n}`).style.height = "160px";
+         };
+         parent.onmouseout = function () {
+           document.getElementById(`contents${n}`).style.height = "32px";
+           document.getElementById(`videos${n}`).style.height = "155px";
+         };
+         let videoBox = document.createElement("div");
+         videoBox.setAttribute("class", "videoBoxes");
+         let vide = document.createElement("iframe");
+         vide.setAttribute('allowFullScreen', '')
+         // vide.addEventListener("click", getData);
+         vide.setAttribute("id", `videos${n}`);
+         vide.setAttribute("width", "100%");
+         vide.setAttribute("height", "155px");
+         vide.src = product.video;
+         videoBox.appendChild(vide);
+         let content = document.createElement("div");
+         content.setAttribute("id", `contents${n}`);
+         let title = document.createElement("p");
+         title.textContent = product.title;
+         let name = document.createElement("p");
+         name.textContent = `Name: ${product.name}`;
+         let by = document.createElement("p");
+         by.textContent = product.by;
+         let date = document.createElement("p");
+         date.textContent = `Released on:${product.date}`;
+         content.append(title, name, by, date);
+
+         parent.append(videoBox, content);
+         document.getElementById("containerPOP").append(parent);
+
+         //slider button adding funconalities
+         var dum = document.getElementsByClassName("dummy");
+         let sliderbtn1 = document.getElementById("slbtns1");
+         let sliderbtn2 = document.getElementById("slbtns2");
+         //function for moving upwards
+         var l = 0;
+         sliderbtn2.onclick = function () {
+           l++;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "-300px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               i.style.left = "0px";
+               l = 0;
+             }
+           }
+         };
+         //function for moving downwards
+         sliderbtn1.onclick = function () {
+           l--;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "0px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               l = 0;
+             }
+           }
+         };
+       });
+       return;
       }
     }
     flag();

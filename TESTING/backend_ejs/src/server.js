@@ -17,7 +17,7 @@ app.use(express.urlencoded());
 //for launching website from signup page
 app.get("/signup",async (req, res) => {
   
-  res.render("Register",{x: ""});
+  res.render("Register",{x: ""});    
 });
 //for merging with href addresses
 app.get('/signin',async (req, res)=>{
@@ -40,5 +40,5 @@ app.use('/login',loginController);
 
 app.listen(3838, async (req, res) => {
   await connectWithMongodb();
-  console.log("listen to port 3838");
+  console.log("listening to port 3838");
 });
