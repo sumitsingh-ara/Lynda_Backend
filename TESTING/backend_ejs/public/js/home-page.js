@@ -17,6 +17,7 @@ window.onclick = function (event) {
 
   // var x = "<%- name %>";
   // // console.log(x); 
+  
   var y = document.querySelector(".entry").textContent;
   
   async function dataFetch() {

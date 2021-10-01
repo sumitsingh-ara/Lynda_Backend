@@ -23,16 +23,13 @@ function showProducts2(showPicks2) {
     videoBox2.setAttribute("class", "videoBoxes2");
    
     
-    let vide2 = document.createElement("img");
+    let vide2 = document.createElement("iframe");
     vide2.setAttribute("id", `videos2${n}`);
     vide2.setAttribute("width", "100%");
     vide2.setAttribute("height", "155px");
-    var a = localStorage.getItem("player")
-    a = JSON.parse(a);
-    if(a >0){
-      vide2.setAttribute("controls", "controls");
-    }
-    vide2.src = product.image;
+    vide2.setAttribute('allowFullScreen', '')
+    
+    vide2.src = product.video;
     videoBox2.appendChild(vide2);
     let content2 = document.createElement("div");
     content2.setAttribute("id", `contents2${n}`);

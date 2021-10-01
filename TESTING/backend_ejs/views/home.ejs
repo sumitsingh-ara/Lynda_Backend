@@ -109,8 +109,7 @@
     <!-- body 1st part -->
     <div class="suggest-su">
       <div class="head-cont-su">
-        <div class="skillGrow-su"><span id="nameDisplay"></span>
-          <%- name %>,grow your skills and advance your career with LinkedIn Learning
+        <div class="skillGrow-su"><span id="nameDisplay"></span>,grow your skills and advance your career with LinkedIn Learning
         </div>
         <div class="million-su">Millions of Members are on LinkedIn Learning</div>
         <div class="pad-top-su">
@@ -121,7 +120,7 @@
     </div>
     <!-- Top Picks Setion -->
     <div class="top-picks-heading">Top Picks for <span id="nameDisplay2">
-        <%- name %>
+    
       </span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button
           id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
     <div id="containerPOP">
@@ -193,26 +192,64 @@
     </div>
   </div>
   </div><!-- end myWorkContent -->
-  <script type="text/javascript" src="js/home-page.js"></script>
+  <!-- <script type="text/javascript" src="js/home-page.js"></script> -->
   <script type="text/javascript" src="js/home-page2.js"></script>
 <script type="text/javascript" src="js/home-page3.js"></script>
 </body>
 
 </html>
 <script>
-  // var x = "<%- name %>";
-  // console.log(x); 
-  var y = "<%- userid %>";
+
+  //fetching the user name and id to display
+  function getuser() {
+    let a = localStorage.getItem("user")
+    a = JSON.parse(a)
+    a = a.email;
+    async function rqst() {
+      let data = await fetch (`http://localhost:3838/login/got/${a}`)
+      let res = await data.json();
+      res = res.user;
+      let x = res[0].first_name;
+        document.getElementById("nameDisplay").innerHTML=x;
+        document.getElementById("nameDisplay2").innerHTML=x;
+    }
+    rqst();
+  }
+  getuser();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   async function dataFetch() {
-    let data = await fetch("http://localhost:3838/products")
+    let data = await fetch("http://localhost:3838/products");
+    let a = localStorage.getItem("user")
+    a = JSON.parse(a)
+    a = a.email;
+      let userdata = await fetch (`http://localhost:3838/login/got/${a}`);///fetching id of user;
+      let result = await userdata.json();
+      result = result.user;
+      let y =(result[0]._id)
     let res = await data.json();
     let x = res.products;
-    showProducts(x)
+    showProducts(x,y)
   }
   dataFetch();
   //data has been
-  function showProducts(prod) {
+  function showProducts(prod,y) {
+  
     async function flag() {
+    
       let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
       let data = await userdata.json();
       data = data.user
@@ -540,7 +577,15 @@
 
 
   function start() {
+    console.log("awwatba")
     async function flag() {
+      let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
       let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
       let data = await userdata.json();
       data = data.user
@@ -567,14 +612,14 @@
             location.reload();
           } else {
             document.getElementById("trial").innerHTML =
-              "Please wait " + timeleft + "";
+              "Please wait " + timeleft + "seconds left";
           }
           timeleft -= 1;
         }, 1000);
       }else{
         document.getElementById("trial").innerHTML = null;
         document.getElementById("trial").textContent = "Trial Exhausted";
-        document.getElementById("trial-main-su").textContent ="Trial period Exhausted"
+        document.getElementById("trial-main-su").textContent ="Trial period Exhausted" ////////-------window locaion to payment page
       }
       //trial activated so finishing trial;
       // else if(x == 1){
@@ -592,13 +637,19 @@
       // }
 
     }
-    flag();
   }
   //Below for updating patch to current user to flag
 
   function update() {
 
     async function demoUpdate() {
+      let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
       await fetch(`http://localhost:3838/users/update/${y}`, {
         method: "PATCH",
         headers: { 'Content-type': "application/json" },
@@ -615,6 +666,13 @@
 
   //checker for trial timers
   async function flag() {
+    let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
       let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
       let data = await userdata.json();
       data = data.user
@@ -629,7 +687,7 @@
 
   function showTrial() {
     
-    var hoursLeft = 20;
+    var hoursLeft = 60;
     var showTimer = setInterval(function show() {
       if (hoursLeft <= 0) {
         clearInterval(showTimer);
@@ -667,4 +725,21 @@
   }
 
 
+
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    let contents_head = document.getElementsByClassName("dropdown-content");
+
+    for (let i = 0; i < contents_head.length; i++) {
+      let showLists = contents_head[i];
+      if (showLists.classList.contains("show")) {
+        showLists.classList.remove("show");
+      }
+    }
+  }
+};
 </script>

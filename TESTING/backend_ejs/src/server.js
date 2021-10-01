@@ -25,7 +25,7 @@ app.get('/signin',async (req, res)=>{
 })
 //for merging with home href
 app.get('/home',async (req, res)=>{
-  res.render("home",{userid,name})
+  res.render("home")
 })
 
 

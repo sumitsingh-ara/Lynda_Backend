@@ -21,10 +21,7 @@ router.post('',async(req,res)=>{
             if(user.length){
                user.forEach(({password,first_name,_id})=>{
                    if(password == req.body.password){
-                    return res.render("home",{
-                        userid:_id,
-                        name:first_name,
-                    })
+                    return res.render("home")
                     
                    }else{
                        return res.render("signin",{y:"User Credentials not matched"})
@@ -41,6 +38,10 @@ router.post('',async(req,res)=>{
     }
 })
 
+router.get("/got/:loginid",async(req, res)=>{
+    const user = await User.find({email_or_phone:req.params.loginid}).lean().exec();
+    return res.status(200).send({user});
+})
 
 
 

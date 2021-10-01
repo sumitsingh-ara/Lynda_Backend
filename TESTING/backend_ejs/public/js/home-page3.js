@@ -52,6 +52,7 @@ function showProducts3(showPicks3) {
     vide3.setAttribute("id", `videos3${n}`);
     vide3.setAttribute("width", "100%");
     vide3.setAttribute("height", "155px");
+    vide3.setAttribute('allowFullScreen', '')
     
     vide3.src = product.video;
     videoBox3.appendChild(vide3);

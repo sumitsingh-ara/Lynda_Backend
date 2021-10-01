@@ -41,7 +41,7 @@
                         </p>
                     </div>
                     <div>
-                        <input type="text" placeholder="Email or Phone" name="email"/>
+                        <input id="emailStore" type="text" placeholder="Email or Phone" name="email"/>
                         <br /><br />
                         <input type="password" placeholder="Password" name="password" /><br /><br />
                         <!-- <a id="signIn" onclick="login()">Sign in</a> -->
@@ -126,4 +126,16 @@
     function pop(){
         alert("You need to login first!");
     }
+    let x = document.getElementById("login-btn");
+    x.addEventListener("click",set);
+    async function set(){
+        let y = document.getElementById("emailStore").value;
+        let z ={
+            email:y,
+        }
+        localStorage.setItem("user", JSON.stringify(z));
+    }
+  
+
+    
 </script>
