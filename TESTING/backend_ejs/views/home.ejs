@@ -58,11 +58,11 @@
         <!-- Home ,My learning,Me, lang,start my free month trial -->
 
         <div class="header-buttons-su">
-          <a href="./home.html" id="home"><i class="fa fa-home adjust" aria-hidden="true"></i>
+          <a href="home" id="home"><i class="fa fa-home adjust" aria-hidden="true"></i>
             <div>Home</div>
           </a>
-          <div class="learning-head"><a href="../My_Learning/myLearning.html" id="login"><i
-                class="fa fa-leanpub adjust2" aria-hidden="true"></i>
+          <div class="learning-head"><a href="myLearning" id="login"><i class="fa fa-leanpub adjust2"
+                aria-hidden="true"></i>
               <div>My Learning</div>
             </a></div>
           <div class="dropdown-head-su">
@@ -70,17 +70,14 @@
               <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o dropbtn adjust3"
                   aria-hidden="true"></i>Me</button>
               <div id="myDropdown" class="dropdown-content">
-                <a href="../My_Learning/myLearning.html">My Learning</a>
-                <a href="../My_Learning/myLearning.html">In Progress</a>
-                <a href="../My_saved/saved.html">Saved</a>
-                <a href="../Business/business.html">Business</a>
-                <a href="../Higher_Education/higherEducation.html">Higher Education</a>
-                <a href="../Government/government.html">Government</a>
-                <a href="../Login/signin.html">Sign-out</a>
+                <a href="myLearning">My Learning</a>
+                <a href="myLearning">In Progress</a>
+                <a href="saved">Saved</a>
+                <a href="business">Business</a>
+                <a href="higherEducation">Higher Education</a>
+                <a href="government">Government</a>
+                <a href="signin">Sign-out</a>
               </div>
-            </div>
-          </div>
-          <div class="timer-head-su" id="trial">Start my free trial</div>
 
         </div>
       </div>
@@ -92,11 +89,11 @@
         <div class="right-side-su">
           <div class="bar-container">
             Solutions for:
-            <a href="../Business/business.html">Business</a>
-            <a href="../Higher_Education/higherEducation.html">Higher Education</a>
-            <a href="../Government/government.html">Goverment</a>
+            <a href="business">Business</a>
+            <a href="higherEducation">Higher Education</a>
+            <a href="government">Goverment</a>
             <div>|</div>
-            <a href="../Subscription/subscription.html">Buy for my team</a>
+            <a href="subscription">Buy for my team</a>
           </div>
         </div>
       </div>
@@ -395,7 +392,7 @@
               } else {
                 courseBag.push(inputs);
                 localStorage.setItem("courseData", JSON.stringify(courseBag));
-                window.location.href = "../Add_Cart/addToCart.html";   /////---need to set location ------for data driven to next page--//
+                window.location.href = "http://localhost:3838/addToCart";   /////---need to set location ------for data driven to next page--//
               }
             }
 
