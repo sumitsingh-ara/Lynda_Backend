@@ -27,7 +27,7 @@ app.get('/signin',async (req, res)=>{
 app.get('/home',async (req, res)=>{
   res.render("home")
 })
-//////////-------------------------Ranjan and Ibtishma Page Merging-------------------------------////
+/////////////////---------------------------------------///////////////////////
 app.get("/addToCart",async(req,res)=>{
   res.render("addToCart")
 })
@@ -73,9 +73,11 @@ app.get("/proMembership",async(req,res)=>{
 const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
 const loginController = require("./controllers/login.controller");
+const searchController = require("./controllers/search.controller");
 app.use("/users",userController);
 app.use("/products",productController);
 app.use('/login',loginController);
+app.use('/search',searchController);
 
 
 

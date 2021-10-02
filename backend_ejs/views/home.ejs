@@ -570,7 +570,7 @@
 
 ////onclick event for trial period
   function start() {
-  
+  console.log("shuru")
     async function flag() {
       let b = localStorage.getItem("user")
       b = JSON.parse(b)
@@ -605,31 +605,19 @@
             location.reload();
           } else {
             document.getElementById("trial").innerHTML =
-              "Please wait " + timeleft + "seconds left";
+              "Please wait " + timeleft + " seconds left";
           }
           timeleft -= 1;
         }, 1000);
       }else{
         document.getElementById("trial").innerHTML = null;
-        document.getElementById("trial").textContent = "Trial Exhausted";
+        document.getElementById("trial").textContent = "Trial period Exhausted";
         document.getElementById("trial-main-su").textContent ="Trial period Exhausted" ////////-------window locaion to payment page
+        window.location.href ="http://localhost:3838/proMembership"
       }
-      //trial activated so finishing trial;
-      // else if(x == 1){
-      //   async function demoUpdate(){
-      //         await fetch(`http://localhost:3838/users/update/${y}`,{
-      //         method: "PATCH",
-      //         headers:{'Content-type': "application/json"},
-      //         body:JSON.stringify({
-      //             flag:2,
-      //         })
-      //       })
-      //     .then(response => response.json())
-      //   }
-      //   demoUpdate();
-      // }
-
+        
     }
+    flag();
   }
   //Below for updating patch to current user to flag
 
@@ -683,7 +671,6 @@
     var showTimer = setInterval(function show() {
       if (hoursLeft <= 0) {
         clearInterval(showTimer);
-        alert("Trial Ended");
         update();
         location.reload();
 
