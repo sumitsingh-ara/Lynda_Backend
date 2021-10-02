@@ -1,7 +1,6 @@
-const mongoose = require("mongoose");
 const express = require("express");
-const bodyParsers = require("body-parser");
-const connectWithMongodb = require("./configs/db");
+
+const connectWithMongodb = require("./configs/db")
 const app = express();
 app.use(express.json());
 
@@ -12,26 +11,75 @@ app.use("/images", express.static(__dirname + "public/images"));
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded());
-app.use(bodyParsers.urlencoded({ extended: true }));
+
+
 
 //for launching website from signup page
-app.get("/signup", async (req, res) => {
-  let data = await User.find({}).lean().exec();
-  res.render("Register", { data });
+app.get("/signup",async (req, res) => {
+  
+  res.render("Register",{x: ""});    
 });
 //for merging with href addresses
-app.get("/signin", async (req, res) => {
-  res.render("signin");
-});
-app.get("/home", async (req, res) => {
-  res.render("home");
-});
+app.get('/signin',async (req, res)=>{
+  res.render("signin",{y:""})
+})
+//for merging with home href
+app.get('/home',async (req, res)=>{
+  res.render("home")
+})
+//////////-------------------------Ranjan and Ibtishma Page Merging-------------------------------////
+app.get("/addToCart",async(req,res)=>{
+  res.render("addToCart")
+})
+
+app.get("/businessContent",async(req,res)=>{
+  res.render("businessContent")
+})
+app.get("/creativeContent",async(req,res)=>{
+  res.render("creativeContent")
+})
+app.get("/technologyContent",async(req,res)=>{
+  res.render("technologyContent")
+})
+app.get("/main",async(req,res)=>{
+  res.render("main")
+})
+app.get("/payment",async(req,res)=>{
+  res.render("payment")
+})
+app.get("/government",async(req,res)=>{
+  res.render("government")
+})
+app.get("/business",async(req,res)=>{
+  res.render("business")
+})
+app.get("/higherEducation",async(req,res)=>{
+  res.render("higherEducation")
+})
+app.get("/myLearning",async(req,res)=>{
+  res.render("myLearning")
+})
+app.get("/saved",async(req,res)=>{
+  res.render("saved")
+})
+app.get("/subscription",async(req,res)=>{
+  res.render("subscription")
+})
+app.get("/proMembership",async(req,res)=>{
+  res.render("proMembership")
+})
+
 
 const userController = require("./controllers/user.controller");
-const User = require("./models/user.models");
-app.use("/users", userController);
+const productController = require("./controllers/product.controller");
+const loginController = require("./controllers/login.controller");
+app.use("/users",userController);
+app.use("/products",productController);
+app.use('/login',loginController);
+
+
 
 app.listen(3838, async (req, res) => {
   await connectWithMongodb();
-  console.log("listen to port 3838");
+  console.log("listening to port 3838");
 });

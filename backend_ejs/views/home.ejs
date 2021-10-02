@@ -1,1 +1,737 @@
-sdfghjk
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/Home-page.css">
+  <link rel="stylesheet" href="css/homepopper.css">
+  <link rel="stylesheet" href="css/homepopper2.css">
+  <link rel="stylesheet" href="css/homepopper3.css">
+  <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- ==========================================header-start-here====================================-->
+  <!-- Navigation Bar -->
+  <div id="header-su">
+    <div class="first-bar">
+      <div class="inside-header-su">
+
+        <div onclick="linkedinHome()" class="linkedin-logo-su hover">in</div>
+        <div onclick="linkedinHome()" class="learning-su hover">LEARNING</div>
+        <!-- Browse button -->
+        <div onclick="topLists()" class="browse-su">
+          <div class="content-su">
+            <div class="dotted">
+              <i class="fa fa-list-ul" aria-hidden="true"></i>
+            </div>
+            <div>
+            </div>
+          </div>
+          <div class="size-su">Browse</div>
+        </div>
+        <!-- Search Box -->
+        <div class="search-Bar-su">
+          <div class="search-input-su">
+            <input type="text" placeholder="Search for skills,subjects or software">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="search-mobile">
+          <div class="content-su">
+            <div class="dotted">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="size-su">Search</div>
+        </div>
+        <!-- Home ,My learning,Me, lang,start my free month trial -->
+
+        <div class="header-buttons-su">
+          <a href="home" id="home"><i class="fa fa-home adjust" aria-hidden="true"></i>
+            <div>Home</div>
+          </a>
+          <div class="learning-head"><a href="myLearning" id="login"><i
+                class="fa fa-leanpub adjust2" aria-hidden="true"></i>
+              <div>My Learning</div>
+            </a></div>
+          <div class="dropdown-head-su">
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o dropbtn adjust3"
+                  aria-hidden="true"></i>Me</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="myLearning">My Learning</a>
+                <a href="myLearning">In Progress</a>
+                <a href="saved">Saved</a>
+                <a href="business">Business</a>
+                <a href="higherEducation">Higher Education</a>
+                <a href="government">Government</a>
+                <a href="signin">Sign-out</a>
+              </div>
+            </div>
+          </div>
+          <div class="timer-head-su" id="trial">Start my free trial</div>
+
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- 2nd nav bar -->
+    <div class="second-bar">
+      <div class="container">
+        <div class="right-side-su">
+          <div class="bar-container">
+            Solutions for:
+            <a href="business">Business</a>
+            <a href="higherEducation">Higher Education</a>
+            <a href="government">Goverment</a>
+            <div>|</div>
+            <a href="subscription">Buy for my team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- ==========================================header-ends-here====================================-->
+  <!-- 3rd part main body -->
+  <div id="body-container">
+    <!-- body 1st part -->
+    <div class="suggest-su">
+      <div class="head-cont-su">
+        <div class="skillGrow-su"><span id="nameDisplay"></span>,grow your skills and advance your career with LinkedIn Learning
+        </div>
+        <div class="million-su">Millions of Members are on LinkedIn Learning</div>
+        <div class="pad-top-su">
+          <button id="trial-main-su" onclick="start()">Start my free month</button>
+        </div>
+        <div class="train">Need to train your team? Learn More</div>
+      </div>
+    </div>
+    <!-- Top Picks Setion -->
+    <div class="top-picks-heading">Top Picks for <span id="nameDisplay2">
+    
+      </span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button
+          id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
+    <div id="containerPOP">
+
+    </div>
+    <!-- slider down -->
+    <div class="slider-below">
+      <h2 style="padding-left: 15px;">Get the most common skills in India <span class="round">i</span> </h2>
+      <div class="slider-below1">
+        <div class=half>
+          <div><span>1</span><span>Engineering</span> <span>Explore-></span></div>
+          <div><span>2</span><span>SQL</span> <span>Explore-></span></div>
+          <div><span>3</span><span>Java</span> <span>Explore-></span></div>
+        </div>
+        <div class=half>
+          <div><span>4</span><span>C (Programming Language)</span> <span>Explore-></span></div>
+          <div><span>5</span><span>HTML</span> <span>Explore-></span></div>
+        </div>
+      </div>
+    </div>
+    <!-- write here -->
+    <!-- 2nd slider -->
+    <div class="top-picks-heading2">Beacause you have Programming Language on your LinkedIn <span><button id="slbtns3"
+          class="btn-Slider marg-lef-pop">&#10094;</button></span>
+      <span><button id="slbtns4" class="btn-Slider">&#10095;</button></span>
+    </div>
+
+    <div id="containerPOP2"></div>
+
+  </div>
+  <!-- 3rd slider -->
+  <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button
+        id="slbtns5" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns6"
+        class="btn-Slider">&#10095;</button></span> </div>
+
+  <div id="containerPOP3"></div>
+
+  </div>
+  <!-- onwards top picks -->
+
+
+
+  </div>
+  <!-- Footer Part -->
+  <div id="footer-su">
+    <div class="footer-first-su">
+      <div class="footer-content-su">
+        <div class="flex-sus">English(English) <div class="arrow-su-fill down-sus"></div>
+        </div>
+        <div>About</div>
+        <div>Become an Instructor</div>
+        <div class="blue-su">Buy for my team</div>
+        <div>Help</div>
+        <div>Privacy & Terms <i class="arrow-su up-su"></i></div>
+        <div>Accessibility</div>
+        <div>Apps <i class="arrow-su up-su"></i></div>
+      </div>
+    </div>
+    <div class="footer-second-su">
+      <div class="flex-sus left-su">
+        <div>
+          <h3>Linked</h3>
+        </div>
+        <div class="linkedin-logo-sus">
+          in
+        </div>
+        <div class="simpler-su">LinkedIn Corporation © 2021</div>
+      </div>
+    </div>
+  </div>
+  </div><!-- end myWorkContent -->
+  <!-- <script type="text/javascript" src="js/home-page.js"></script> -->
+  <script type="text/javascript" src="js/home-page2.js"></script>
+<script type="text/javascript" src="js/home-page3.js"></script>
+</body>
+
+</html>
+<script>
+  //////going to home////////////////////////////////
+  function linkedinHome(){
+    window.location.href ="http://localhost:3838/home"
+  }
+  function topLists(){
+    window.location.href ="http://localhost:3838/businessContent"
+  }
+
+  //fetching the user name and id to display
+  function getuser() {
+    let a = localStorage.getItem("user")
+    a = JSON.parse(a)
+    a = a.email;
+    async function rqst() {
+      let data = await fetch (`http://localhost:3838/login/got/${a}`)
+      let res = await data.json();
+      res = res.user;
+      let x = res[0].first_name;
+        document.getElementById("nameDisplay").innerHTML=x;
+        document.getElementById("nameDisplay2").innerHTML=x;
+    }
+    rqst();
+  }
+  getuser();
+
+
+//fetching the data to show videos
+  async function dataFetch() {
+    let data = await fetch("http://localhost:3838/products");
+    let a = localStorage.getItem("user")
+    a = JSON.parse(a)
+    a = a.email;
+      let userdata = await fetch (`http://localhost:3838/login/got/${a}`);///fetching id of user;
+      let result = await userdata.json();
+      result = result.user;
+      let y =(result[0]._id)
+    let res = await data.json();
+    let x = res.products;
+    showProducts(x,y)
+  }
+  dataFetch();
+  //data has been
+  function showProducts(prod,y) {
+  
+    async function flag() {
+    
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+      if (data.payment_flag == false) {
+        if (data.flag == 1) {
+          //slider 1
+         prod.forEach(function (product, n) {
+         let parent = document.createElement("div");
+         parent.setAttribute("id", "parent");
+         parent.setAttribute("class", "dummy");
+         parent.onmouseenter = function () {
+           document.getElementById(`contents${n}`).style.height = "180px";
+           document.getElementById(`videos${n}`).style.height = "160px";
+         };
+         parent.onmouseout = function () {
+           document.getElementById(`contents${n}`).style.height = "32px";
+           document.getElementById(`videos${n}`).style.height = "155px";
+         };
+         let videoBox = document.createElement("div");
+         videoBox.setAttribute("class", "videoBoxes");
+         let vide = document.createElement("iframe");
+         vide.setAttribute('allowFullScreen', '')
+         // vide.addEventListener("click", getData);
+         vide.setAttribute("id", `videos${n}`);
+         vide.setAttribute("width", "100%");
+         vide.setAttribute("height", "155px");
+         vide.src = product.video;
+         videoBox.appendChild(vide);
+         let content = document.createElement("div");
+         content.setAttribute("id", `contents${n}`);
+         let title = document.createElement("p");
+         title.textContent = product.title;
+         let name = document.createElement("p");
+         name.textContent = `Name: ${product.name}`;
+         let by = document.createElement("p");
+         by.textContent = product.by;
+         let date = document.createElement("p");
+         date.textContent = `Released on:${product.date}`;
+         content.append(title, name, by, date);
+
+         parent.append(videoBox, content);
+         document.getElementById("containerPOP").append(parent);
+
+         //slider button adding funconalities
+         var dum = document.getElementsByClassName("dummy");
+         let sliderbtn1 = document.getElementById("slbtns1");
+         let sliderbtn2 = document.getElementById("slbtns2");
+         //function for moving upwards
+         var l = 0;
+         sliderbtn2.onclick = function () {
+           l++;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "-300px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               i.style.left = "0px";
+               l = 0;
+             }
+           }
+         };
+         //function for moving downwards
+         sliderbtn1.onclick = function () {
+           l--;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "0px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               l = 0;
+             }
+           }
+         };
+       });
+
+
+
+
+
+
+
+
+
+
+        }
+        else {
+         var courseBag =[];
+          prod.forEach(function (product, n) {
+            let parent = document.createElement("div");
+            parent.setAttribute("id", "parent");
+            parent.setAttribute("class", "dummy");
+            parent.onmouseenter = function () {
+              document.getElementById(`contents${n}`).style.height = "180px";
+              document.getElementById(`videos${n}`).style.height = "160px";
+            };
+            parent.onmouseout = function () {
+              document.getElementById(`contents${n}`).style.height = "32px";
+              document.getElementById(`videos${n}`).style.height = "155px";
+            };
+            let videoBox = document.createElement("div");
+            videoBox.setAttribute("class", "videoBoxes");
+            let vide = document.createElement("img");
+            vide.addEventListener("click", getData);
+            
+            var courseKey = [];
+            function getData() {
+              let checker3 = localStorage.getItem("courseData");
+              checker3 = JSON.parse(checker3);
+              for (key in checker3) {
+                courseKey.push(checker3[key].name);
+              }
+
+              let inputs = {
+                name: product.name,
+                price: product.price,
+                video: product.video,/////----need to add image instead of video link
+                date: product.date,
+                time: product.time,
+                by: product.by,
+                title: product.title,
+              };
+              if (courseKey.indexOf(product.name) != -1) {
+                alert("This course is already added");
+              } else {
+                courseBag.push(inputs);
+                localStorage.setItem("courseData", JSON.stringify(courseBag));
+                window.location.href = "http://localhost:3838/addToCart";   /////---need to set location ------for data driven to next page--//
+              }
+            }
+
+
+
+
+              /////----data sended to ls for add to cart pages --------------------------------//
+
+
+
+
+
+
+
+
+
+
+            vide.setAttribute("id", `videos${n}`);
+            vide.setAttribute("width", "100%");
+            vide.setAttribute("height", "155px");
+            vide.src = product.image;
+            videoBox.appendChild(vide);
+            let content = document.createElement("div");
+            content.setAttribute("id", `contents${n}`);
+            let title = document.createElement("p");
+            title.textContent = product.title;
+            let name = document.createElement("p");
+            name.textContent = `Name: ${product.name}`;
+            let by = document.createElement("p");
+            by.textContent = product.by;
+            let date = document.createElement("p");
+            date.textContent = `Released on:${product.date}`;
+            content.append(title, name, by, date);
+
+            parent.append(videoBox, content);
+            document.getElementById("containerPOP").append(parent);
+            //slider button adding funconalities
+            var dum = document.getElementsByClassName("dummy");
+            let sliderbtn1 = document.getElementById("slbtns1");
+            let sliderbtn2 = document.getElementById("slbtns2");
+            //function for moving upwards
+            var l = 0;
+            sliderbtn2.onclick = function () {
+              l++;
+              for (var i of dum) {
+                if (l == 0) {
+                  i.style.left = "-300px";
+                }
+                if (l == 1) {
+                  i.style.left = "-740px";
+                }
+                if (l == 2) {
+                  i.style.left = "-1480px";
+                }
+                if (l == 3) {
+                  i.style.left = "-2220px";
+                }
+                if (l >= 4) {
+                  i.style.left = "0px";
+                  l = 0;
+                }
+              }
+            };
+            //function for moving downwards
+            sliderbtn1.onclick = function () {
+              l--;
+              for (var i of dum) {
+                if (l == 0) {
+                  i.style.left = "0px";
+                }
+                if (l == 1) {
+                  i.style.left = "-740px";
+                }
+                if (l == 2) {
+                  i.style.left = "-1480px";
+                }
+                if (l == 3) {
+                  i.style.left = "-2220px";
+                }
+              }
+            };
+          });
+        }
+      } else {
+        ////////when payment done///then only
+        prod.forEach(function (product, n) {
+         let parent = document.createElement("div");
+         parent.setAttribute("id", "parent");
+         parent.setAttribute("class", "dummy");
+         parent.onmouseenter = function () {
+           document.getElementById(`contents${n}`).style.height = "180px";
+           document.getElementById(`videos${n}`).style.height = "160px";
+         };
+         parent.onmouseout = function () {
+           document.getElementById(`contents${n}`).style.height = "32px";
+           document.getElementById(`videos${n}`).style.height = "155px";
+         };
+         let videoBox = document.createElement("div");
+         videoBox.setAttribute("class", "videoBoxes");
+         let vide = document.createElement("iframe");
+         vide.setAttribute('allowFullScreen', '')
+         // vide.addEventListener("click", getData);
+         vide.setAttribute("id", `videos${n}`);
+         vide.setAttribute("width", "100%");
+         vide.setAttribute("height", "155px");
+         vide.src = product.video;
+         videoBox.appendChild(vide);
+         let content = document.createElement("div");
+         content.setAttribute("id", `contents${n}`);
+         let title = document.createElement("p");
+         title.textContent = product.title;
+         let name = document.createElement("p");
+         name.textContent = `Name: ${product.name}`;
+         let by = document.createElement("p");
+         by.textContent = product.by;
+         let date = document.createElement("p");
+         date.textContent = `Released on:${product.date}`;
+         content.append(title, name, by, date);
+
+         parent.append(videoBox, content);
+         document.getElementById("containerPOP").append(parent);
+
+         //slider button adding funconalities
+         var dum = document.getElementsByClassName("dummy");
+         let sliderbtn1 = document.getElementById("slbtns1");
+         let sliderbtn2 = document.getElementById("slbtns2");
+         //function for moving upwards
+         var l = 0;
+         sliderbtn2.onclick = function () {
+           l++;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "-300px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               i.style.left = "0px";
+               l = 0;
+             }
+           }
+         };
+         //function for moving downwards
+         sliderbtn1.onclick = function () {
+           l--;
+           for (var i of dum) {
+             if (l == 0) {
+               i.style.left = "0px";
+             }
+             if (l == 1) {
+               i.style.left = "-740px";
+             }
+             if (l == 2) {
+               i.style.left = "-1480px";
+             }
+             if (l == 3) {
+               i.style.left = "-2220px";
+             }
+             if (l >= 4) {
+               l = 0;
+             }
+           }
+         };
+       });
+       return;
+      }
+    }
+    flag();
+  }
+
+
+////onclick event for trial period
+  function start() {
+  
+    async function flag() {
+      let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+    
+      let x = data.flag;
+      //trial not activated
+      if (x == 0) {
+        async function demoUpdate() {
+          await fetch(`http://localhost:3838/users/update/${y}`, {
+            method: "PATCH",
+            headers: { 'Content-type': "application/json" },
+            body: JSON.stringify({
+              flag: 1,
+            })
+          })
+            .then(response => response.json())
+        }
+        demoUpdate();
+        var timeleft = 3;
+        var downloadTimer = setInterval(function set() {
+          if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+            alert("Congratualtion trial activated")
+            location.reload();
+          } else {
+            document.getElementById("trial").innerHTML =
+              "Please wait " + timeleft + "seconds left";
+          }
+          timeleft -= 1;
+        }, 1000);
+      }else{
+        document.getElementById("trial").innerHTML = null;
+        document.getElementById("trial").textContent = "Trial Exhausted";
+        document.getElementById("trial-main-su").textContent ="Trial period Exhausted" ////////-------window locaion to payment page
+      }
+      //trial activated so finishing trial;
+      // else if(x == 1){
+      //   async function demoUpdate(){
+      //         await fetch(`http://localhost:3838/users/update/${y}`,{
+      //         method: "PATCH",
+      //         headers:{'Content-type': "application/json"},
+      //         body:JSON.stringify({
+      //             flag:2,
+      //         })
+      //       })
+      //     .then(response => response.json())
+      //   }
+      //   demoUpdate();
+      // }
+
+    }
+  }
+  //Below for updating patch to current user to flag
+
+  function update() {
+
+    async function demoUpdate() {
+      let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
+      await fetch(`http://localhost:3838/users/update/${y}`, {
+        method: "PATCH",
+        headers: { 'Content-type': "application/json" },
+        body: JSON.stringify({
+          flag: 2,
+        })
+      })
+        .then(response => response.json())
+    }
+
+    demoUpdate();
+  }
+  //Trial timer runners 
+
+  //checker for trial timers
+  async function flag() {
+    let b = localStorage.getItem("user")
+      b = JSON.parse(b)
+      b = b.email;
+      let bdata = await fetch (`http://localhost:3838/login/got/${b}`);///fetching id of user;
+      let bres = await bdata.json();
+      bres = bres.user;
+      var y =(bres[0]._id)
+      let userdata = await fetch(`http://localhost:3838/users/getone/${y}`)
+      let data = await userdata.json();
+      data = data.user
+      let x = data.flag;
+      if(x == 1) {
+        showTrial();
+      }
+  }
+  flag()
+
+
+  function showTrial() {
+    
+    var hoursLeft = 60;
+    var showTimer = setInterval(function show() {
+      if (hoursLeft <= 0) {
+        clearInterval(showTimer);
+        alert("Trial Ended");
+        update();
+        location.reload();
+
+        document.getElementById("trial").innerHTML = "Buy Pro Membership";
+      } else {
+        let mins = 0;
+        var store = hoursLeft;
+        while (store >= 60) {
+          store = store - 60;
+          mins++;
+        }
+        let hr = 0;
+        while (mins >= 60) {
+          mins = mins - 60;
+          hr++;
+        }
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+        if (hr < 10) {
+          hr = "0" + hr;
+        }
+        if (store < 10) {
+          store = "0" + store;
+        }
+        document.getElementById("trial").innerHTML =
+          "Trial left " + hr + " : " + mins + " : " + store;
+      }
+      hoursLeft -= 1;
+    }, 1000);
+  }
+
+
+
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    let contents_head = document.getElementsByClassName("dropdown-content");
+
+    for (let i = 0; i < contents_head.length; i++) {
+      let showLists = contents_head[i];
+      if (showLists.classList.contains("show")) {
+        showLists.classList.remove("show");
+      }
+    }
+  }
+};
+</script>

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div  id="main_container">
+  <div   id="main_container">
     <header>
       <div class="logo-section">
         <div class="logo-container">
@@ -24,7 +24,7 @@
       </div>
     </header>
     <form action="/users" method="post">
-    <div  id="form-main-content">
+    <div onclick="remove()"  id="form-main-content">
       <div class="form-wrap">
         <div>
          <div class="fnameLname">
@@ -39,7 +39,9 @@
           <input  id="password" type="password" placeholder="Create a password" name="password" />
           <p class="join-form">By clicking Agree & Join, you agree to the LinkedIn <a href="">User Agreement</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.</p>
           <p>
-            <div id="signedup">
+            <div id="signedup" >
+              <!-- Need to show here the error message -->
+              <%= x %>
             </div>
           <input class="sign-In" id="continue" type="submit" value="Agree & Join"/>
         </div>
@@ -75,6 +77,15 @@
 
 </html>
 <script>
+    function pop(){
+      let show = document.getElementById("signedup");
+      show.textContent="You need to login first"
+      show.style.color ="red"
+    }
+    function remove(e){
+      e.preventDefault();
+      let show = document.getElementById("signedup");
+      show.innerHTML=null;
+    }
 
-  
 </script>
