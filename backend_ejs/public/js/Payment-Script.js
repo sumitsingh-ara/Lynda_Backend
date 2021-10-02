@@ -88,7 +88,7 @@
 
             document.getElementById("checkout3").append(firstBox,showcaseDiv,genuine);
             let store = Math.floor((18 / 100) * product.price);
-            console.log(store) ;
+        
             product.price = Number(product.price) ;
             let realPrice = store + product.price;
             let showTotals = document.getElementById("totalsDone")

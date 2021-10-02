@@ -8,7 +8,7 @@
             let data = await fetch("http://localhost:3838/users")
             let res = await data.json();
             let x = res.users;
-                console.log(x);
+                
                 x.forEach(({email_or_phone,password,first_name,flag,payment_flag})=> {
             
                     if(email1===email_or_phone ){

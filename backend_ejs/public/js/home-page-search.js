@@ -13,6 +13,7 @@ async function data(){
     displaySearch(res.searches);
 }
 
+
 ////------------------------displaying the searched data------------------- ////
 function displaySearch(prod){
     if(prod.length == 0){
@@ -20,10 +21,11 @@ function displaySearch(prod){
         return
     }
     document.getElementById("empty").innerHTML = null;
+    document.getElementById("empty").style.backgroundColor ="white";
     document.getElementById("footer-su").innerHTML=null;
     document.getElementById("footer-su").style.display = "none";
-    
-    prod.forEach(({video,by,name,wikipediaLink,date,title,time})=>{
+    var courseBag=[];
+    prod.forEach(({video,by,name,wikipediaLink,date,title,time,price})=>{
             let appender = document.createElement("div");
             appender.setAttribute("class", "appender");
 
@@ -68,7 +70,6 @@ function displaySearch(prod){
             hours.innerHTML = count;
             var minute = document.createElement("p")
             minute.textContent = b;
-            console.log("Count", count)
             
             progress.setAttribute("max",time);
             durations.append(progress)
@@ -102,6 +103,45 @@ function displaySearch(prod){
 
             dateDiv.append(bys, dates);
             videoContent.append(titles, names, dateDiv, bigDuration)
+           videoContent.addEventListener("click",getData)
+            var courseKey = [];
+            function getData() {
+              let checker3 = localStorage.getItem("courseData");
+              checker3 = JSON.parse(checker3);
+              for (key in checker3) {
+                courseKey.push(checker3[key].name);
+              }
+
+              let inputs = {
+                name:name,
+                price:price,
+                video:video,/////----need to add image instead of video link
+                date:date,
+                time:time,
+                by:by,
+                title:title,
+              };
+              if (courseKey.indexOf(name) != -1) {
+                alert("This course is already added");
+              } else {
+                courseBag.push(inputs);
+                localStorage.setItem("courseData", JSON.stringify(courseBag));
+                window.location.href = "http://localhost:3838/addToCart";   /////---need to set location ------for data driven to next page--//
+              }
+            } 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             appender.append(videoDiv, videoContent)
 

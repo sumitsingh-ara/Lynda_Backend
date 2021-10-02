@@ -1,51 +1,9 @@
 #empty{
-    margin-top: 100px;
-  
+    margin-top: 100px;  
 }
 
   /*=============================<<<<<<<header-end>>>>>>>>>>>>>===========================*/
   /* Body part starting */
-  
-  /* Body Ended,footer starts */
-  .content-su h3 {
-    margin: 0px;
-    margin-top: 3px;
-  }
-  
-  .content-su {
-    margin: 0px;
-    margin-left: 2%;
-    display: flex;
-  }
-  
-  .content-su h2 {
-    margin: 0px;
-    margin-top: 0px;
-  }
-  
-  #trial {
-    width: 46%;
-  }
-  
-  .bar-container div {
-    margin-left: 3%;
-  }
-  .bar-container a:hover {
-    color: black;
-    text-decoration: underline;
-  }
-  hr {
-    margin: 0px;
-  }
-  
-  .inside-header-su {
-    height: 80%;
-    display: flex;
-  }
-  .size-su {
-    font-size: 14px;
-  }
-  
   /* Body part starting */
   .content-su h3 {
     margin: 0px;

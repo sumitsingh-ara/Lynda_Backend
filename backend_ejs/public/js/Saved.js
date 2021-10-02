@@ -123,16 +123,14 @@
             hours.innerHTML = count;
             var minute = document.createElement("p")
             minute.textContent = b;
-            console.log("Count", count)
-            console.log(b)
+            
 
 
             progress.setAttribute("max", product.time);
             durations.append(progress)
             durations2.append(hours, "-hours &-", minute, "-minutes left")
             bigDuration.append(durations, durations2, share)
-            //console.log(random(product.time/2))
-            //console.log(document.getElementById("videoPlayerNew").duration)
+            
 
 
             //vidcontent
