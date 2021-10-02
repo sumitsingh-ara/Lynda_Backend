@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/homepopper.css">
   <link rel="stylesheet" href="css/homepopper2.css">
   <link rel="stylesheet" href="css/homepopper3.css">
+  <link rel="stylesheet" href="css/homesearch.css">
   <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +44,7 @@
         <!-- Search Box -->
         <div class="search-Bar-su">
           <div class="search-input-su">
-            <input type="text" placeholder="Search for skills,subjects or software">
+            <input id="search" type="text" placeholder="Search for skills,subjects or software">
             <i class="fa fa-search" aria-hidden="true"></i>
           </div>
         </div>
@@ -104,97 +105,100 @@
     <hr>
   </div>
   <!-- ==========================================header-ends-here====================================-->
-  <!-- 3rd part main body -->
-  <div id="body-container">
-    <!-- body 1st part -->
-    <div class="suggest-su">
-      <div class="head-cont-su">
-        <div class="skillGrow-su"><span id="nameDisplay"></span>,grow your skills and advance your career with LinkedIn Learning
-        </div>
-        <div class="million-su">Millions of Members are on LinkedIn Learning</div>
-        <div class="pad-top-su">
-          <button id="trial-main-su" onclick="start()">Start my free month</button>
-        </div>
-        <div class="train">Need to train your team? Learn More</div>
-      </div>
-    </div>
-    <!-- Top Picks Setion -->
-    <div class="top-picks-heading">Top Picks for <span id="nameDisplay2">
-    
-      </span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button
-          id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
-    <div id="containerPOP">
-
-    </div>
-    <!-- slider down -->
-    <div class="slider-below">
-      <h2 style="padding-left: 15px;">Get the most common skills in India <span class="round">i</span> </h2>
-      <div class="slider-below1">
-        <div class=half>
-          <div><span>1</span><span>Engineering</span> <span>Explore-></span></div>
-          <div><span>2</span><span>SQL</span> <span>Explore-></span></div>
-          <div><span>3</span><span>Java</span> <span>Explore-></span></div>
-        </div>
-        <div class=half>
-          <div><span>4</span><span>C (Programming Language)</span> <span>Explore-></span></div>
-          <div><span>5</span><span>HTML</span> <span>Explore-></span></div>
+  <div id="empty">
+    <!-- 3rd part main body -->
+    <div id="body-container">
+      <!-- body 1st part -->
+      <div class="suggest-su">
+        <div class="head-cont-su">
+          <div class="skillGrow-su"><span id="nameDisplay"></span>,grow your skills and advance your career with LinkedIn Learning
+          </div>
+          <div class="million-su">Millions of Members are on LinkedIn Learning</div>
+          <div class="pad-top-su">
+            <button id="trial-main-su" onclick="start()">Start my free month</button>
+          </div>
+          <div class="train">Need to train your team? Learn More</div>
         </div>
       </div>
-    </div>
-    <!-- write here -->
-    <!-- 2nd slider -->
-    <div class="top-picks-heading2">Beacause you have Programming Language on your LinkedIn <span><button id="slbtns3"
-          class="btn-Slider marg-lef-pop">&#10094;</button></span>
-      <span><button id="slbtns4" class="btn-Slider">&#10095;</button></span>
-    </div>
+      <!-- Top Picks Setion -->
+      <div class="top-picks-heading">Top Picks for <span id="nameDisplay2">
+      
+        </span> <span><button id="slbtns1" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button
+            id="slbtns2" class="btn-Slider">&#10095;</button></span> </div>
+      <div id="containerPOP">
 
-    <div id="containerPOP2"></div>
-
-  </div>
-  <!-- 3rd slider -->
-  <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button
-        id="slbtns5" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns6"
-        class="btn-Slider">&#10095;</button></span> </div>
-
-  <div id="containerPOP3"></div>
-
-  </div>
-  <!-- onwards top picks -->
-
-
-
-  </div>
-  <!-- Footer Part -->
-  <div id="footer-su">
-    <div class="footer-first-su">
-      <div class="footer-content-su">
-        <div class="flex-sus">English(English) <div class="arrow-su-fill down-sus"></div>
-        </div>
-        <div>About</div>
-        <div>Become an Instructor</div>
-        <div class="blue-su">Buy for my team</div>
-        <div>Help</div>
-        <div>Privacy & Terms <i class="arrow-su up-su"></i></div>
-        <div>Accessibility</div>
-        <div>Apps <i class="arrow-su up-su"></i></div>
       </div>
-    </div>
-    <div class="footer-second-su">
-      <div class="flex-sus left-su">
-        <div>
-          <h3>Linked</h3>
+      <!-- slider down -->
+      <div class="slider-below">
+        <h2 style="padding-left: 15px;">Get the most common skills in India <span class="round">i</span> </h2>
+        <div class="slider-below1">
+          <div class=half>
+            <div><span>1</span><span>Engineering</span> <span>Explore-></span></div>
+            <div><span>2</span><span>SQL</span> <span>Explore-></span></div>
+            <div><span>3</span><span>Java</span> <span>Explore-></span></div>
+          </div>
+          <div class=half>
+            <div><span>4</span><span>C (Programming Language)</span> <span>Explore-></span></div>
+            <div><span>5</span><span>HTML</span> <span>Explore-></span></div>
+          </div>
         </div>
-        <div class="linkedin-logo-sus">
-          in
-        </div>
-        <div class="simpler-su">LinkedIn Corporation © 2021</div>
       </div>
+      <!-- write here -->
+      <!-- 2nd slider -->
+      <div class="top-picks-heading2">Beacause you have Programming Language on your LinkedIn <span><button id="slbtns3"
+            class="btn-Slider marg-lef-pop">&#10094;</button></span>
+        <span><button id="slbtns4" class="btn-Slider">&#10095;</button></span>
+      </div>
+
+      <div id="containerPOP2"></div>
+
     </div>
-  </div>
-  </div><!-- end myWorkContent -->
+    <!-- 3rd slider -->
+    <div class="top-picks-heading3">Beacause you have Programming Language on your LinkedIn Profile<span><button
+          id="slbtns5" class="btn-Slider marg-lef-pop">&#10094;</button></span><span><button id="slbtns6"
+          class="btn-Slider">&#10095;</button></span> </div>
+
+    <div id="containerPOP3"></div>
+
+    </div>
+    <!-- onwards top picks -->
+
+
+
+    </div>
+    <!-- Footer Part -->
+        <div id="footer-su">
+          <div class="footer-first-su">
+            <div class="footer-content-su">
+              <div class="flex-sus">English(English) <div class="arrow-su-fill down-sus"></div>
+              </div>
+              <div>About</div>
+              <div>Become an Instructor</div>
+              <div class="blue-su">Buy for my team</div>
+              <div>Help</div>
+              <div>Privacy & Terms <i class="arrow-su up-su"></i></div>
+              <div>Accessibility</div>
+              <div>Apps <i class="arrow-su up-su"></i></div>
+            </div>
+          </div>
+          <div class="footer-second-su">
+            <div class="flex-sus left-su">
+              <div>
+                <h3>Linked</h3>
+              </div>
+              <div class="linkedin-logo-sus">
+                in
+              </div>
+              <div class="simpler-su">LinkedIn Corporation © 2021</div>
+            </div>
+          </div>
+        </div>
+        </div><!-- end myWorkContent -->
+    </div>
   <!-- <script type="text/javascript" src="js/home-page.js"></script> -->
   <script type="text/javascript" src="js/home-page2.js"></script>
 <script type="text/javascript" src="js/home-page3.js"></script>
+<script type="text/javascript" src="js/home-page-search.js"></script>
 </body>
 
 </html>

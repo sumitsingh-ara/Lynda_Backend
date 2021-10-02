@@ -13,6 +13,12 @@ router.get('/title/:titleid',async(req,res)=>{
     return res.status(200).send({searches})
 })
 
+router.patch('/video/:id',async(req,res)=>{
+    const search = await Search.findByIdAndUpdate(req.params.id,req.body,{new:true}).lean().exec();
+
+    return res.status(200).send({search})
+})
+
 router.post('',async(req,res)=>{
     
     const search = await Search.create(req.body);
