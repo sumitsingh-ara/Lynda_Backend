@@ -146,7 +146,8 @@ There are some static pages also such as
 3. Then write command to run server file:
 - npm run server
 
-3.  After successfully installations, you have to visit signup folder simply from browser by providing this address
+3.  After successfully installations, you have to visit signup folder simply from browser by providing this address :
+
  - http://localhost:3838/signup
 
 3. Now, run *signup.html* in your browser, so that you can create account for sign-in and another process.
