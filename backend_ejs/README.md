@@ -7,13 +7,14 @@ This full stack project is mainly aimed to provide a facility as a learning webs
 Backend will helps to access any videos or study material easily wheather online or offline mode of a system.
 This project is extended version of our previous project,now this website includes more advance feature in it.
 
-
+--------------------------
 ## Technologies and tools
 
 **Frontend:** EJS, HTML-CSS3 and Javascript
 
 **Backend:**  Javascript, Express and Mongoose
 
+------------------------------
 ## Features of web-project
 
 -  Complete validation, authentication functionality in *Signup & Signin page* .
@@ -29,7 +30,7 @@ This project is extended version of our previous project,now this website includ
 -  In My Learning, we are providing an ease to user to track watched history of any video,with a dynamic progress bar and etc.
 
 -  Inside saved section of learning page, user will get the total count of saved videos, by his/her-self only and those videos with all descriptive information of it.
-
+--------------------------------
   **Extra-Features of this website:**
 
 - If user will forgot password then, he can easily reset it by the help of popup which is provided in sign-in page 
@@ -40,6 +41,7 @@ This project is extended version of our previous project,now this website includ
 
 - Learning-Page holds all the relevant video with the *total count of video* in each section. 
 
+------------------------------------
 ## System Requirements
 
 - Web Browsers : Apart from internet explorer 9, this web project will easily run in any of the system supported web browsers running on the specified operating systems.
@@ -47,38 +49,47 @@ This project is extended version of our previous project,now this website includ
 - Processor : 1.9 gigahertz (GHz) x86- or x64-bit dual core processor with SSE2 instruction set.
 
 - Memory :	2 GB RAM
+
+------------------------------
+
 ##  Preview after running locally
 
  
-For Signup |   Signin Credentials
+Signup Section |   Signin Credentials
 :-------------------------: |:-------------------------:
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1630261879779/hg2fwi_0v.jpeg?auto=compress) | ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1633251680302/PHchtDj5p.png?auto=compress) 
-
-###Extra Functionality
+-----------------------------
+### Extra Functionality
 
 Working of Forgot Password 
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1633251588495/sS4989GHl.png?auto=compress)
 
+--------------------------
 Overview of Home  | Bussiness Page
 :-----:|:-------:
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1631692309203/Aj8aB3zAh.png) | ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1631682480983/C-uK5uZAh.png?auto=compress)
 
+----------------------------
 ### Extra Functionality
 Feature of Search bar
+
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1633252256155/E-GAwHA-U.png?auto=compress)
+
+-----------------------
 
 My learning Section | For Subscription
 :----------: |:--------:
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1630262724445/MHMQ8ROW3.jpeg?auto=compress) | ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1630262008823/upKIA3Y-T.jpeg?auto=compress)
 
+-----------------------
 
 Trusted Payment gateway     | Further Procedure to payment Safely
 :--------------------: | :---------------------:
  ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1630264468334/FusPEcTvl.jpeg?auto=compress) |  ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1630262967747/WEtCgdmuJ.jpeg?auto=compress)  
 
  
-
+----------------------------
 
 ##  Manipulation Procedure 
 
@@ -118,10 +129,11 @@ There are some static pages also such as
 - Shailaja Tripathi
 
 
+--------------------------
 ## Click here to read more 
 
-[ Hashnode Blog ](https://hashnode.com/post/full-stack-lynda-learning-website-with-advance-features-ckub2bg5x049a0gs1d5myftwb)
-
+[ Hashnode Blog  ](https://hashnode.com/post/full-stack-lynda-learning-website-with-advance-features-ckub2bg5x049a0gs1d5myftwb)
+---------------------------------------
 ## Steps to run this project
 
 1. Firstly, you need to clone this backend_ejs folder to run and use this website.
