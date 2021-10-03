@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button onclick="hit()">HIT ME TO GET A MAIL</button>
+</body>
+
+</script>
+</html>
+<script>
+function hit() {
+    Email.send({
+    SecureToken : "61b1f845-0842-4fb6-a24f-7d9f76fce4c4",
+    To : 'singhsumitkumar503@gmail.com',
+    From : "sumit47919@gmail.com",
+    Subject : "Heartiest Welcome on Lynda Pro",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
+</script>
+

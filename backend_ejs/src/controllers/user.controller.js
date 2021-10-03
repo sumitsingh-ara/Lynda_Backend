@@ -12,7 +12,6 @@ router.get('/getone/:id',async(req,res)=>{
     const user = await User.findById(req.params.id).lean().exec();
     res.status(200).send({user})
 
-
 })
 router.patch('/update/:id',async(req,res)=>{
     const user = await User.findByIdAndUpdate(req.params.id,req.body,{new:true}).lean().exec()

@@ -74,10 +74,14 @@ const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
 const loginController = require("./controllers/login.controller");
 const searchController = require("./controllers/search.controller");
+const savedController = require("./controllers/saved.controller");
+const inprogressController = require("./controllers/inprogress.controller");
 app.use("/users",userController);
 app.use("/products",productController);
 app.use('/login',loginController);
 app.use('/search',searchController);
+app.use('/savedvideos',savedController);
+app.use('/inprogress',inprogressController);
 
 
 

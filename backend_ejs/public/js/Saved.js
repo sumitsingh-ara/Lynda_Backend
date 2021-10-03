@@ -15,69 +15,17 @@
     }
   };
 
-  let products = [
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning the Java Script Promises",
-            by: "By: Swanand",
-            date: "19th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-            time: 30,
-        },
-        {
-            title: "GIT",
-            name: "Learning Git Branching",
-            by: "By: Nrupul Dev",
-            date: "24th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_3.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub",
-            time: 29,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning How JS Works",
-            by: "By: Swanand",
-            date: "16th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-            time: 124,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning the Concepts of DOM",
-            by: "By: Swanand",
-            date: "17th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
-            time: 91,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Project on DOM E-cart",
-            by: "By: Swanand",
-            date: "21st August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
-            time: 93,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Project on DOM Movie-Website",
-            by: "By: Sumit Web_11_237",
-            date: "19th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Untitled.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events",
-            time: 3,
-        },
-    ]
-    localStorage.setItem("myCourse", JSON.stringify(products))
+async function display () {
+    let data = await fetch("http://localhost:3838/savedvideos");
+    let res = await data.json();
+    res = res.saved;
+    showProducts(res)
+}
+display();
 
-    var myCourses = localStorage.getItem("myCourse")
-    myCourses = JSON.parse(myCourses);
-
-    function showProducts() {
-
+    function showProducts(myCourses) {
+        let showProgress = document.getElementById("mysaved")
+        showProgress.textContent = "Saved-"+(myCourses.length);
         myCourses.forEach(function (product) {
             let appender = document.createElement("div");
             appender.setAttribute("class", "appender");
@@ -85,11 +33,12 @@
 
             let videoDiv = document.createElement("div");
             videoDiv.setAttribute("class", "video-play-su")
-            let vids = document.createElement("VIDEO");
+            let vids = document.createElement("iframe");
             vids.src = product.video
             vids.setAttribute("width", "100%");
             vids.setAttribute("height", "150");
             vids.setAttribute("controls", "controls");
+            vids.setAttribute('allowFullScreen', '')
             vids.setAttribute("id", "videoPlayerNew");
             videoDiv.appendChild(vids)
             //progress bar
@@ -146,7 +95,7 @@
             let link = document.createTextNode(product.name)
             name.appendChild(link)
 
-            name.href = product.link;
+            name.href = product.wikipediaLink;
             name.setAttribute("class", "name-su")
 
 
@@ -170,7 +119,7 @@
         })
 
     }
-    showProducts()
+
 
     function topLists(){
         window.location.href ="http://localhost:3838/businessContent";

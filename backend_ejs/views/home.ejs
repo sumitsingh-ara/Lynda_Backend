@@ -77,7 +77,7 @@
                 <a href="business">Business</a>
                 <a href="higherEducation">Higher Education</a>
                 <a href="government">Government</a>
-                <a href="signin">Sign-out</a>
+                <a id="signout" href="signin">Sign-out</a>
               </div>
             </div>
           </div>
@@ -204,6 +204,7 @@
 </html>
 <script>
   //////going to home////////////////////////////////
+  
   function linkedinHome(){
     window.location.href ="http://localhost:3838/home"
   }
@@ -235,6 +236,13 @@
     let a = localStorage.getItem("user")
     a = JSON.parse(a)
     a = a.email;
+    if(a == undefined) {
+      alert("You need to login first!");
+      window.location.href ="http://localhost:3838/signin"
+      return;
+    }
+   
+    console.log(a,"a ka email")
       let userdata = await fetch (`http://localhost:3838/login/got/${a}`);///fetching id of user;
       let result = await userdata.json();
       result = result.user;
@@ -725,4 +733,9 @@ window.onclick = function (event) {
     }
   }
 };
+
+document.getElementById("signout").onclick = function(){
+  let z ={}
+  localStorage.setItem("user", JSON.stringify(z));
+}
 </script>

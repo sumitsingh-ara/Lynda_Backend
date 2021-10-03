@@ -15,45 +15,15 @@
     }
   };
 
-let products = [
-{
-    title: "REACT:BUILD PROGRESSIVE WEB APPS",
-    name: "Create and design your own first website ",
-    by: "By:shekhar",
-    date: "09th may 2018",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/react.mp4",
-    link: "https://www.tutorialspoint.com/react_native/react_native_overview.htm",
-    time: 4500,
-    price: 5999,
-  },
-  {
-    title: "DATA STRUUCTURE AND ALGORITHM",
-    name: "Be a pro in data structures and algorithms",
-    by: "By:Abdul Bari",
-    date: "09th october 2020",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/dsa.mp4",
-    link: "https://www.geeksforgeeks.org/data-structures/",
-    time: 8000,
-    price: 10000,
-  },
-  {
-    title: "DOCKER FOR DEVELOPERS",
-    name: "Docker for develpers ",
-    by: "By:Peter Dakota ",
-    date: "28th February 2020",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/docker.mp4",
-    link: "https://developer.mozilla.org/en-US/docs/Mozilla/QA/Running_automated_tests/Docker",
-    time: 3000,
-    price: 9550,
-  },
-    ]
-    
-    localStorage.setItem("myCourse", JSON.stringify(products))
-
-    var myCourses = localStorage.getItem("myCourse")
-    myCourses = JSON.parse(myCourses);
+async function display(){
+  let data = await fetch("http://localhost:3838/inprogress");
+  let res = await data.json();
+  res = res.inprogress;
+  showProducts(res)
+}
+display();
         
-    function showProducts() {
+    function showProducts(myCourses) {
      
         let showProgress = document.getElementById("onProgresssu")
         showProgress.textContent = "In Progress-"+(myCourses.length);
@@ -65,10 +35,11 @@ let products = [
 
             let videoDiv = document.createElement("div");
             videoDiv.setAttribute("class", "video-play-su")
-            let vids = document.createElement("VIDEO");
+            let vids = document.createElement("iframe");
             vids.src = product.video
             vids.setAttribute("width", "100%");
             vids.setAttribute("height", "150");
+            vids.setAttribute('allowFullScreen', '')
             vids.setAttribute("controls", "controls");
             vids.setAttribute("id", "videoPlayerNew");
             videoDiv.appendChild(vids)
@@ -127,7 +98,7 @@ let products = [
             let link = document.createTextNode(product.name)
             name.appendChild(link)
 
-            name.href = product.link;
+            name.href = product.wikipediaLink;
             name.setAttribute("class", "name-su")
 
 
@@ -151,7 +122,6 @@ let products = [
         })
 
     }
-    showProducts()
 
     function topLists(){
         window.location.href = "http://localhost:3838/businessContent";
@@ -226,188 +196,3 @@ let products = [
         
 
 
-        //Saved Section Showing Data
-        let productsSaved = [
-        {
-    title: "LEARNING DJANGO",
-    name: "Django framework for intermidiate",
-    by: "By:Paul Johnson",
-    date: "19th March 2017",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/django.mp4",
-    link: "https://docs.djangoproject.com/en/3.2/",
-    time: 3000,
-    price: 3999,
-  },
-  {
-    title: "MEDIA QUERIES",
-    name: "Create responsive pages using css media queries",
-    by: "By:Ashish Mehra",
-    date: "04th june 2019",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/mediaquery.mp4",
-    link: "https://docs.djangoproject.com/en/3.2/",
-    time: 300,
-    price: 399,
-  },
-  {
-    title: "ASYNC AND AWAITS",
-    name: "Learn promies be expert in async and awaits ",
-    by: "By:Shivani Chaudhari",
-    date: "01th January 2018",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/async.mp4",
-    link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await",
-    time: 350,
-    price: 490,
-  },
-  {
-    title: "LEARN FIGMA",
-    name: "Create and design your own first website ",
-    by: "By:Tejasvi Singh",
-    date: "09th april 2013",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/figma.mp4",
-    link: "https://mockitt.wondershare.com/figma/figma-tutorial.html",
-    time: 600,
-    price: 999,
-  },
-  {
-    title: "REACT:BUILD PROGRESSIVE WEB APPS",
-    name: "Create and design your own first website ",
-    by: "By:shekhar",
-    date: "09th may 2018",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/react.mp4",
-    link: "https://www.tutorialspoint.com/react_native/react_native_overview.htm",
-    time: 4500,
-    price: 5999,
-  },
-  {
-    title: "DATA STRUUCTURE AND ALGORITHM",
-    name: "Be a pro in data structures and algorithms",
-    by: "By:Abdul Bari",
-    date: "09th october 2020",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/dsa.mp4",
-    link: "https://www.geeksforgeeks.org/data-structures/",
-    time: 8000,
-    price: 10000,
-  },
-  {
-    title: "DOCKER FOR DEVELOPERS",
-    name: "Docker for develpers ",
-    by: "By:Peter Dakota ",
-    date: "28th February 2020",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/docker.mp4",
-    link: "https://developer.mozilla.org/en-US/docs/Mozilla/QA/Running_automated_tests/Docker",
-    time: 3000,
-    price: 9550,
-  },
-  {
-    title: "APTITUDE AND  REASONING ",
-    name: "Learn aptitude and reasoning to crack the GATE ",
-    by: "By:Swastika Mukharjee",
-    date: "09th may 2018",
-    video: "C:/Users/Sumit/Desktop/VideosLocal/aptitude.mp4",
-    link: "https://developer.mozilla.org/en-US/docs/Mozilla/QA/Running_automated_tests/Docker",
-    time: 780,
-    price: 450,
-  },
-    ]
-    localStorage.setItem("myCourseSaved", JSON.stringify(productsSaved))
-
-    var myCoursesSaved = localStorage.getItem("myCourseSaved")
-    myCoursesSaved = JSON.parse(myCoursesSaved);
-
-    function showProductsSaved() {
-        let newAppend = document.getElementById("video-box-su")
-                newAppend.innerHTML = null;
-                let showProgress = document.getElementById("savedShow")
-        showProgress.textContent = "Saved-"+(myCoursesSaved.length);
-        myCoursesSaved.forEach(function (product) {
-            let appender = document.createElement("div");
-            appender.setAttribute("class", "appender");
-
-
-            let videoDiv = document.createElement("div");
-            videoDiv.setAttribute("class", "video-play-su")
-            let vids = document.createElement("VIDEO");
-            vids.src = product.video
-            vids.setAttribute("width", "100%");
-            vids.setAttribute("height", "150");
-            vids.setAttribute("controls", "controls");
-            vids.setAttribute("id", "videoPlayerNew");
-            videoDiv.appendChild(vids)
-            //progress bar
-
-            let bigDuration = document.createElement("div")
-            bigDuration.setAttribute("class", "flex-su")
-
-            let share = document.createElement("button");
-            share.textContent = "Share"
-            share.setAttribute("class", "sharebtn-su")
-
-            let durations = document.createElement("div");
-            let durations2 = document.createElement("div");
-            durations2.setAttribute("class", "flex-hour-su")
-            durations.setAttribute("class", "durationBox-su")
-            let progress = document.createElement("PROGRESS")
-            function random(number) {
-                return Math.floor(Math.random() * number)
-            }
-            var generator = random(product.time)
-            progress.setAttribute("value", generator);
-
-            var a = generator;
-            var b = product.time - generator;
-            var count = 0;
-            while (b >= 60) {
-                b = b - 60;
-                count++
-            }
-            var hours = document.createElement("p");
-            hours.innerHTML = count;
-            var minute = document.createElement("p")
-            minute.textContent = b;
-            
-
-
-            progress.setAttribute("max", product.time);
-            durations.append(progress)
-            durations2.append(hours, "-hours &-", minute, "-minutes left")
-            bigDuration.append(durations, durations2, share)
-            
-
-
-            //vidcontent
-            let videoContent = document.createElement("div");
-            videoContent.setAttribute("id", "vid-content-su");
-
-
-            let title = document.createElement("p");
-            title.textContent = product.title;
-            title.setAttribute("class", "title-su")
-
-            let name = document.createElement("a");
-            let link = document.createTextNode(product.name)
-            name.appendChild(link)
-
-            name.href = product.link;
-            name.setAttribute("class", "name-su")
-
-
-            let dateDiv = document.createElement("div");
-            dateDiv.setAttribute("class", "dateBox-su")
-            let by = document.createElement("p");
-            by.textContent = product.by;
-
-            let date = document.createElement("p");
-            date.setAttribute("class", "left-sus")
-            date.textContent = product.date;
-
-            dateDiv.append(by, date);
-            videoContent.append(title, name, dateDiv, bigDuration)
-
-            appender.append(videoDiv, videoContent)
-
-
-
-            document.getElementById('video-box-su').appendChild(appender);
-        })
-
-    }
