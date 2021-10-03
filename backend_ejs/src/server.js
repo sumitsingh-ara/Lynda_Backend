@@ -17,7 +17,7 @@ app.use(express.urlencoded());
 //for launching website from signup page
 app.get("/signup",async (req, res) => {
   
-  res.render("Register",{x: ""});    
+  res.render("index",{x: ""});    
 });
 //for merging with href addresses
 app.get('/signin',async (req, res)=>{
